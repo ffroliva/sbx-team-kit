@@ -140,5 +140,6 @@ Reproduced on sbx 0.50.0 — see [../FINDINGS.md](../FINDINGS.md) §1: two write
 3. Prototype B as a tiny host-side broker (a Python script holding `LockFileEx` + token counter) and
    rerun 1 and 2 through it → zero corruption, zero lost lines.
 
-That is a reproducible case, a design, and a test suite — the format `GOVERNANCE.md` says a
-proposal must take.
+That is a reproducible case, a design, and a test suite — the format the kit spec's
+[GOVERNANCE.md](https://github.com/docker/sandbox-kit-spec/blob/main/GOVERNANCE.md) says a proposal
+must take.

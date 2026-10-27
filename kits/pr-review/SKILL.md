@@ -388,7 +388,7 @@ flow.google.com", "Google flags this launch". **Out of scope:** findings about t
 the docs, or the PR's own evidence, such as a missing test, a stale sentence, or the D4
 "e2e absent" rule. Those are checked by reading, and step 5 covers them.
 
-For each in-scope finding, follow [`spike`](../spike/SKILL.md):
+For each in-scope finding, follow [`spike`](https://github.com/ffroliva/gflow-cli/blob/develop/skills/spike/SKILL.md):
 
 1. **Pre-register the reading** before running anything: what you will run, and what result
    means CONFIRMED, REFUTED, or unmeasured. Use a table, like the spike skill's.

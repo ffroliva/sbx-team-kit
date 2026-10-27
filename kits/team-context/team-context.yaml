@@ -1,0 +1,39 @@
+# syntax=docker/sandbox-kit:3
+schemaVersion: "3"
+kind: mixin
+displayName: Team context (Java, regulated)
+description: Shared team rules, a network allow-list built from real policy logs, and a memory convention that survives sbx rm.
+
+capabilities:
+  # Built from the 19 and 26 Oct policy logs: what a Java/Spring agent actually reached or was blocked on.
+  - type: com.docker.sandbox/network-policy@1
+    config:
+      runtime:
+        allow:
+          - repo.maven.apache.org:443
+          - repo1.maven.org:443
+          - plugins.gradle.org:443
+          - services.gradle.org:443
+          - github.com:443
+          - github.com:22          # git over SSH: not in Balanced; caused ~60 approval prompts in 30 s on 19 Oct
+          - api.github.com:443
+
+  - type: com.docker.sandbox/agent-context@1
+    config:
+      content: |
+        # Team rules
+
+        - Java 25, Spring Boot 4. Build with `./mvnw -q verify` before claiming anything works.
+        - Sibling repositories mounted read-only are reference context. Never try to write to them.
+        - Secrets never go in files. Credentials are proxy-managed; placeholders are not the real values.
+
+        ## Memory — read this
+
+        This sandbox's home directory is deleted by `sbx rm`, and other sandboxes cannot see it.
+        Anything worth remembering goes in the workspace, not in ~/.claude:
+
+        - Append durable learnings to `docs/agent-memory.md` in the project (create it if missing).
+        - One line per fact, dated, with the reason. It is reviewed in the pull request like code.
+        - Read `docs/agent-memory.md` at the start of every session.
+
+dockerfile: team-context.dockerfile

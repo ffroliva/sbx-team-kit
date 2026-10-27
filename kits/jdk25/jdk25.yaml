@@ -1,0 +1,17 @@
+# syntax=docker/sandbox-kit:3
+schemaVersion: "3"
+kind: mixin
+displayName: JDK 25
+description: Eclipse Temurin 25 at /opt/java/openjdk for the v3 claude workload, which ships no JDK.
+
+capabilities:
+  # mvn and mvnw source ~/.mavenrc, so Maven finds the JDK without touching PATH.
+  - type: com.docker.sandbox/lifecycle@1
+    config:
+      files:
+        - path: /home/agent/.mavenrc
+          overwrite: false
+          content: |
+            JAVA_HOME=/opt/java/openjdk
+
+dockerfile: jdk25.dockerfile

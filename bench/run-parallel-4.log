@@ -1,0 +1,15 @@
+== local mode=parallel model=sonnet tasks=['lifo', 'domain-errors', 'merkle-proof-by-hash'] sandbox=4cpu/4g
+   p155613-lifo: create exit 0 in 11s
+   p155613-domain-errors: create exit 0 in 12s
+   p155613-merkle-proof-by-hash: create exit 0 in 11s
+   lifo: exit 0 143s turns=8 cost=$0.20286 collected=39daa27671d15402679c88b7253852a1962f4f53 — 
+
+In the class Javadoc I changed "Both orderings break ties" to "Every ordering breaks ties", since there are now three.
+   domain-errors: exit 0 125s turns=7 cost=$0.1805676 collected=f80ecdd55c70d7d1d6b8a1ad5a94f8673084647f — DONE f80ecdd tests passed
+   merkle-proof-by-hash: exit 0 142s turns=7 cost=$0.1578251 collected=869f94f3fe28576bdad9fcb3ba87709b262a90b2 — DONE 869f94f tests passed
+== merge collected work into integration branch
+   merge refs/bench/p155613-lifo: ok (1 commits)
+   merge refs/bench/p155613-domain-errors: ok (1 commits)
+   merge refs/bench/p155613-merkle-proof-by-hash: ok (1 commits)
+== full verify on integration-parallel-155613: PASS in 79s
+== create 12s, agents 144s, total 238s, cost $0.54 -> run-parallel-155613.json

@@ -1,0 +1,45 @@
+=== D cold shared, -e stack traces
+md-153845-d1 rc=1 4s
+java.io.IOException: File exists
+    at org.eclipse.aether.internal.impl.DefaultTrackingFileManager.update (DefaultTrackingFileManager.java:113)
+    at org.eclipse.aether.internal.impl.DefaultUpdateCheckManager.write (DefaultUpdateCheckManager.java:529)
+    at org.eclipse.aether.internal.impl.DefaultUpdateCheckManager.touchArtifact (DefaultUpdateCheckManager.java:476)
+    at org.eclipse.aether.internal.impl.DefaultArtifactResolver.evaluateDownloads (DefaultArtifactResolver.java:649)
+    at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads (DefaultArtifactResolver.java:558)
+    at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve (DefaultArtifactResolver.java:450)
+    at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts (DefaultArtifactResolver.java:261)
+    at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact (DefaultArtifactResolver.java:243)
+    at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact (DefaultRepositorySystem.java:278)
+    at org.apache.maven.project.ProjectModelResolver.resolveModel (ProjectModelResolver.java:172)
+    at org.apache.maven.model.building.DefaultModelBuilder.importDependencyManagement (DefaultModelBuilder.java:1204)
+    at org.apache.maven.model.building.DefaultModelBuilder.build (DefaultModelBuilder.java:529)
+    at org.apache.maven.model.building.DefaultModelBuilder.build (DefaultModelBuilder.java:498)
+md-153845-d2 rc=1 4s
+java.io.IOException: File exists
+    at org.eclipse.aether.internal.impl.DefaultTrackingFileManager.update (DefaultTrackingFileManager.java:113)
+    at org.eclipse.aether.internal.impl.DefaultUpdateCheckManager.write (DefaultUpdateCheckManager.java:529)
+    at org.eclipse.aether.internal.impl.DefaultUpdateCheckManager.touchArtifact (DefaultUpdateCheckManager.java:476)
+    at org.eclipse.aether.internal.impl.DefaultArtifactResolver.evaluateDownloads (DefaultArtifactResolver.java:649)
+    at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads (DefaultArtifactResolver.java:558)
+    at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve (DefaultArtifactResolver.java:450)
+    at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts (DefaultArtifactResolver.java:261)
+    at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact (DefaultArtifactResolver.java:243)
+    at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact (DefaultRepositorySystem.java:278)
+    at org.apache.maven.project.ProjectModelResolver.resolveModel (ProjectModelResolver.java:172)
+    at org.apache.maven.model.building.DefaultModelBuilder.importDependencyManagement (DefaultModelBuilder.java:1204)
+    at org.apache.maven.model.building.DefaultModelBuilder.build (DefaultModelBuilder.java:529)
+    at org.apache.maven.model.building.DefaultModelBuilder.build (DefaultModelBuilder.java:498)
+md-153845-d3 rc=0 140s
+--- wall 141s
+=== W1 warm shared (complete cache), 3 concurrent
+md-153845-w1 rc=0 104s
+md-153845-w3 rc=0 104s
+md-153845-w2 rc=0 106s
+--- wall 107s
+=== W2 warm shared, repeat
+md-153845-x1 rc=0 97s
+md-153845-x3 rc=0 99s
+md-153845-x2 rc=0 100s
+--- wall 101s
+=== done 153845
+No sandboxes found

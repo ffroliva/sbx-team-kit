@@ -1,0 +1,46 @@
+== host: trusted inputs
+   merge-base 7b6b9054, diff 41287 chars, CI ['SUCCESS', 'SUCCESS', None]
+== sandbox rv-1108: clone of the PR at 38827652
+   workdir /c/development/github/sbx-team-kit/tmp/review-1108, HEAD 38827652 == pinned SHA
+== 9 dimensions in parallel inside the sandbox
+   after 20s: 10 claude processes; out dir: ok
+== synthesis (opus) inside the sandbox
+
+| dim | tier | model used | input | cache read | cache write | output | cost $ | s | verdict | must-fix |
+|---|---|---|---|---|---|---|---|---|---|---|
+| D1 | opus | claude-opus-5-5 | 26 | 823426 | 65298 | 5025 | 0.7877 | 72 | YELLOW | 1 |
+| D2 | sonnet | claude-sonnet-5-5 | 10 | 225239 | 48218 | 1446 | 0.2299 | 26 | GREEN | 0 |
+| D3 | opus | claude-opus-5-5 | 12 | 298213 | 53742 | 2370 | 0.5370 | 36 | GREEN | 0 |
+| D4 | opus | claude-opus-5-5 | 16 | 468277 | 66032 | 5021 | 0.7224 | 56 | YELLOW | 4 |
+| D5 | haiku | claude-haiku-5-5 | 18 | 509998 | 65053 | 7508 | 0.0219 | 47 | YELLOW | 1 |
+| D6 | sonnet | claude-sonnet-5-5 | 6 | 121022 | 46290 | 1309 | 0.2104 | 23 | YELLOW | 1 |
+| D9 | sonnet | claude-sonnet-5-5 | 12 | 286207 | 49247 | 2290 | 0.2485 | 35 | YELLOW | 1 |
+| D14 | sonnet | claude-sonnet-5-5 | 6 | 114661 | 45364 | 790 | 0.2008 | 22 | GREEN | 0 |
+| D15 | haiku | claude-haiku-5-5 | 24 | 852148 | 78503 | 8986 | 0.0287 | 55 | YELLOW | 1 |
+
+synthesis: YELLOW — No dimension is RED. D1, D4, D5, D6, D9 and D15 are YELLOW; D2, D3 and D14 are GREEN. D0 is UNVERIFIED (one CI check has no result), which caps the verdict at YELLOW. The runtime change is a narrow, correct gate lift: r2v plus a named entity only; t2v and id-only still exit 36; labs routing is uncha
+total reported cost $3.5517; wall 150s; working tree after review: CLEAN
+policy log:
+BLOCKED REQUESTS
+SANDBOX   TYPE      HOST                                     PROXY     RULE                                                                                                                REASON                                  LAST SEEN         COUNT
+rv-1108   network   http-intake.logs.us5.datadoghq.com:443   forward   no applicable policies for op(action=net:connect:tcp, resource=net:domain:http-intake.logs.us5.datadoghq.com:443)   No matching allow rule (default deny)   00:08:13 27-Oct   31
+rv-1108   network   mcp.intercom.com:443                     forward   no applicable policies for op(action=net:connect:tcp, resource=net:domain:mcp.intercom.com:443)                     No matching allow rule (default deny)   00:07:36 27-Oct   2
+rv-1108   network   mcp.notion.com:443                       forward   no applicable policies for op(action=net:connect:tcp, resource=net:domain:mcp.notion.com:443)                       No matching allow rule (default deny)   00:07:36 27-Oct   2
+rv-1108   network   mcp.atlassian.com:443                    forward   no applicable policies for op(action=net:connect:tcp, resource=net:domain:mcp.atlassian.com:443)                    No matching allow rule (default deny)   00:07:36 27-Oct   2
+rv-1108   network   mcp.linear.app:443                       forward   no applicable policies for op(action=net:connect:tcp, resource=net:domain:mcp.linear.app:443)                       No matching allow rule (default deny)   00:07:36 27-Oct   2
+rv-1108   network   mcp.asana.com:443                        forward   no applicable policies for op(action=net:connect:tcp, resource=net:domain:mcp.asana.com:443)                        No matching allow rule (default deny)   00:07:36 27-Oct   2
+rv-1108   network   mcp.figma.com:443                        forward   no applicable policies for op(action=net:connect:tcp, resource=net:domain:mcp.figma.com:443)                        No matching allow rule (default deny)   00:07:36 27-Oct   2
+rv-1108   network   mcp.slack.com:443                        forward   no applicable policies for op(action=net:connect:tcp, resource=net:domain:mcp.slack.com:443)                        No matching allow rule (default deny)   00:07:36 27-Oct   2
+
+ALLOWED REQUESTS
+SANDBOX   TYPE      HOST                             PROXY            RULE                     REASON   LAST SEEN         COUNT
+rv-1108   network   api.anthropic.com:443            forward                                            00:08:13 27-Oct   422
+rv-1108   network   api.github.com:443               forward-bypass                                     00:07:48 27-Oct   1
+rv-1108   network   mcp-gateway.docker.internal:80   forward          <daemon-managed alias>            00:07:35 27-Oct   16
+rv-1108   network   mcp-proxy.anthropic.com:443      forward                                            00:06:12 27-Oct   5
+rv-1108   network   archive.ubuntu.com:80            forward                                            00:06:01 27-Oct   4
+rv-1108   network   security.ubuntu.com:80           forward                                            00:06:01 27-Oct   3
+rv-1108   network   download.docker.com:443          forward-bypass                                     00:06:01 27-Oct   3
+rv-1108   network   cli.github.com:443               forward-bypass                                     00:06:01 27-Oct   3
+artefacts: C:\development\github\sbx-team-kit\logs\council-1108-000541
+exit 0

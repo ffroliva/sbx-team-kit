@@ -1,0 +1,21 @@
+== mode=parallel model=sonnet tasks=['lifo', 'domain-errors', 'merkle-proof-by-hash'] sandbox=4cpu/4g
+   p130223-lifo: create exit 1 in 37s andbox-templates:claude-code-docker": get Docker Hub access token: token is unverifiable: error while executing keyfunc: Get "https://login.docker.com/.well-known/jwks.json": context deadline exceeded
+   p130223-domain-errors: create exit 1 in 27s Hub access token: token is unverifiable: error while executing keyfunc: Get "https://login.docker.com/.well-known/jwks.json": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+   p130223-merkle-proof-by-hash: create exit 1 in 22s erifiable: error while executing keyfunc: Get "https://login.docker.com/.well-known/jwks.json": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+   lifo: exit 125 30s turns=None cost=$None collected=None — ub refresh lock held by another process: context deadline exceeded
+error: sandbox 'p130223-lifo' not found
+  try: sbx ls
+   domain-errors: exit 125 26s turns=None cost=$None collected=None — h lock held by another process: context deadline exceeded
+error: sandbox 'p130223-domain-errors' not found
+  try: sbx ls
+   merkle-proof-by-hash: exit 125 24s turns=None cost=$None collected=None — held by another process: context deadline exceeded
+error: sandbox 'p130223-merkle-proof-by-hash' not found
+  try: sbx ls
+== merge collected work into integration branch
+   p130223-lifo: NOT COLLECTED — sandbox kept for recovery
+   p130223-domain-errors: NOT COLLECTED — sandbox kept for recovery
+   p130223-merkle-proof-by-hash: NOT COLLECTED — sandbox kept for recovery
+== full verify on integration-parallel-130223: FAIL in 1s
+The JAVA_HOME environment variable is not defined correctly,
+this environment variable is needed to run this program.
+== create 37s, agents 39s, total 78s, cost $0 -> run-parallel-130223.json

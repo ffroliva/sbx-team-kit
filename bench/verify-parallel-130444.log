@@ -1,0 +1,1072 @@
+############################################################################################
+# Thanks for using OpenAPI Generator.                                                      #
+# We appreciate your support! Please consider donating to help us maintain this project.   #
+# https://opencollective.com/openapi_generator/donate                                      #
+############################################################################################
+13:08:19.504 [main] INFO com.tngtech.archunit.ArchConfiguration -- Reading ArchUnit properties from file:/C:/development/github/tiny-ledger-sbx-work/target/test-classes/archunit.properties
+Oct 27, 2026 1:08:20 PM org.junit.platform.launcher.core.DiscoveryIssueNotifier logIssues
+WARNING: TestEngine with ID 'junit-platform-suite' encountered a non-critical issue during test discovery:
+
+(1) [WARNING] [cucumber] The classpath resource selector 'features' should not be used to select features in a package. Use the package selector with 'features' instead (via @Suite com.ffroliva.tinyledger.cucumber.CucumberTest).
+13:08:21.689 [main] INFO com.tngtech.archunit.core.PluginLoader -- Detected Java version 25.0.3
+13:08:25.818 [main] WARN com.ffroliva.tinyledger.audit.adapter.in.events.AuditKafkaListener -- actor header missing for f6fbc321-0e30-4aa1-a5ef-96bbc0cb5d2e, using payload's actor 'trent'
+13:08:25.922 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.ffroliva.tinyledger.audit.adapter.in.web.AuditControllerTest]: AuditControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:08:26.135 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.audit.adapter.in.web.AuditControllerTest
+13:08:26.139 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.ffroliva.tinyledger.audit.adapter.in.web.AuditControllerTest]: AuditControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:08:26.157 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.audit.adapter.in.web.AuditControllerTest
+Tiny Ledger (4.1.1)
+
+2026-10-27T13:08:26.583Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.a.a.in.web.AuditControllerTest     : Starting AuditControllerTest using Java 25.0.3 with PID 22712 (started by ffrol in C:\development\github\tiny-ledger-sbx-work)
+2026-10-27T13:08:26.586Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.a.a.in.web.AuditControllerTest     : No active profile set, falling back to 1 default profile: "standalone"
+2026-10-27T13:08:29.063Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-27T13:08:29.063Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-27T13:08:29.066Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2026-10-27T13:08:29.107Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.a.a.in.web.AuditControllerTest     : Started AuditControllerTest in 2.853 seconds (process running for 10.985)
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (C:\Users\ffrol\.m2\repository\net\bytebuddy\byte-buddy-agent\1.18.11\byte-buddy-agent-1.18.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-10-27T13:08:30.414Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ffroliva.tinyledger.audit.adapter.in.web.AuditControllerTest$WithAnAuditTrailWired]: WithAnAuditTrailWired does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-27T13:08:30.428Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.audit.adapter.in.web.AuditControllerTest$WithAnAuditTrailWired
+2026-10-27T13:08:30.430Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ffroliva.tinyledger.audit.adapter.in.web.AuditControllerTest$WithAnAuditTrailWired]: WithAnAuditTrailWired does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-27T13:08:30.430Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ffroliva.tinyledger.audit.adapter.in.web.AuditControllerTest]: AuditControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-27T13:08:30.435Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.audit.adapter.in.web.AuditControllerTest$WithAnAuditTrailWired
+Tiny Ledger (4.1.1)
+
+2026-10-27T13:08:30.474Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]uditControllerTest$WithAnAuditTrailWired : Starting AuditControllerTest.WithAnAuditTrailWired using Java 25.0.3 with PID 22712 (started by ffrol in C:\development\github\tiny-ledger-sbx-work)
+2026-10-27T13:08:30.475Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]uditControllerTest$WithAnAuditTrailWired : No active profile set, falling back to 1 default profile: "standalone"
+2026-10-27T13:08:31.134Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-27T13:08:31.135Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-27T13:08:31.136Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-27T13:08:31.144Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]uditControllerTest$WithAnAuditTrailWired : Started AuditControllerTest.WithAnAuditTrailWired in 0.702 seconds (process running for 13.022)
+2026-10-27T13:08:31.494Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ffroliva.tinyledger.balance.adapter.in.events.LedgerEventsListenerTest]: LedgerEventsListenerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-27T13:08:31.544Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.balance.adapter.in.events.LedgerEventsListenerTest
+2026-10-27T13:08:31.549Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ffroliva.tinyledger.balance.adapter.in.events.LedgerEventsListenerTest]: LedgerEventsListenerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-27T13:08:31.551Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.balance.adapter.in.events.LedgerEventsListenerTest
+Tiny Ledger (4.1.1)
+
+2026-10-27T13:08:31.593Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.b.a.i.e.LedgerEventsListenerTest   : Starting LedgerEventsListenerTest using Java 25.0.3 with PID 22712 (started by ffrol in C:\development\github\tiny-ledger-sbx-work)
+2026-10-27T13:08:31.593Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.b.a.i.e.LedgerEventsListenerTest   : The following 1 profile is active: "standalone"
+2026-10-27T13:08:32.381Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-27T13:08:32.386Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-10-27T13:08:32.479Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 0 Redis repository interfaces.
+2026-10-27T13:08:35.204Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.s.config.TaskSchedulerRouter         : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2026-10-27T13:08:35.212Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.b.a.i.e.LedgerEventsListenerTest   : Started LedgerEventsListenerTest in 3.655 seconds (process running for 17.091)
+2026-10-27T13:08:35.308Z  WARN 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.tinyledger.config.RateLimitConfig    : rate limiting is NOT enforced for these IPs (ledger.rate-limit.exempt-ips): [127.0.0.1]
+2026-10-27T13:08:35.310Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.tinyledger.platform.StartupBanner    : Tiny Ledger listening on http://127.0.0.1:8080
+2026-10-27T13:08:35.310Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.tinyledger.platform.StartupBanner    : AUTH DISABLED (standalone)
+2026-10-27T13:08:35.489Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ffroliva.tinyledger.balance.adapter.in.web.BalanceControllerTest]: BalanceControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-27T13:08:35.542Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.balance.adapter.in.web.BalanceControllerTest
+2026-10-27T13:08:35.544Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ffroliva.tinyledger.balance.adapter.in.web.BalanceControllerTest]: BalanceControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-27T13:08:35.551Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.balance.adapter.in.web.BalanceControllerTest
+Tiny Ledger (4.1.1)
+
+2026-10-27T13:08:35.595Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.b.a.in.web.BalanceControllerTest   : Starting BalanceControllerTest using Java 25.0.3 with PID 22712 (started by ffrol in C:\development\github\tiny-ledger-sbx-work)
+2026-10-27T13:08:35.595Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.b.a.in.web.BalanceControllerTest   : No active profile set, falling back to 1 default profile: "standalone"
+2026-10-27T13:08:36.715Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-27T13:08:36.717Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-27T13:08:36.720Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2026-10-27T13:08:36.740Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.b.a.in.web.BalanceControllerTest   : Started BalanceControllerTest in 1.175 seconds (process running for 18.619)
+2026-10-27T13:08:37.229Z ERROR 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,a1b2c3d4-e5f6-4a1b-8c2d-3e4f5a6b7c8d]c.f.t.platform.ErrorHandlingAdvice       : unhandled exception at the API boundary
+
+java.lang.RuntimeException: boom
+	at com.ffroliva.tinyledger.balance.adapter.in.web.BalanceController.getBalance(BalanceController.java:75) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:172) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.9.jar:7.0.9]
+	at com.ffroliva.tinyledger.balance.adapter.in.web.BalanceController$$SpringCGLIB$$1.getBalance(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.25.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.25.jar:6.1]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at com.ffroliva.tinyledger.platform.FapiInteractionIdFilter.doFilterInternal(FapiInteractionIdFilter.java:85) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:199) ~[spring-test-7.0.9.jar:7.0.9]
+	at com.ffroliva.tinyledger.balance.adapter.in.web.BalanceControllerTest.theProblemBodyTraceIdIsTheInteractionId(BalanceControllerTest.java:272) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
+
+2026-10-27T13:08:37.862Z ERROR 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.b.a.out.redis.RedisBalanceCache    : balance cache put: 0603a871-8faa-4c12-9281-b172ac92c12b could not be serialised, so it is not cached
+
+com.ffroliva.tinyledger.balance.adapter.out.redis.RedisBalanceCacheTest$SerialisationBug: no serializer found for BalanceView
+	at com.ffroliva.tinyledger.balance.adapter.out.redis.RedisBalanceCacheTest$UnserialisableViews.writeValueAsString(RedisBalanceCacheTest.java:85) ~[test-classes/:na]
+	at com.ffroliva.tinyledger.balance.adapter.out.redis.RedisBalanceCache.put(RedisBalanceCache.java:62) ~[classes/:na]
+	at com.ffroliva.tinyledger.balance.adapter.out.redis.RedisBalanceCacheTest.lambda$aViewThatCannotBeSerialisedIsLoggedAtErrorAndNotRethrown$0(RedisBalanceCacheTest.java:62) ~[test-classes/:na]
+	at org.assertj.core.api.ThrowableAssert.catchThrowable(ThrowableAssert.java:66) ~[assertj-core-3.27.7.jar:na]
+	at org.assertj.core.api.AssertionsForClassTypes.catchThrowable(AssertionsForClassTypes.java:908) ~[assertj-core-3.27.7.jar:na]
+	at org.assertj.core.api.AssertionsForClassTypes.assertThatCode(AssertionsForClassTypes.java:879) ~[assertj-core-3.27.7.jar:na]
+	at org.assertj.core.api.Assertions.assertThatCode(Assertions.java:1396) ~[assertj-core-3.27.7.jar:na]
+	at com.ffroliva.tinyledger.balance.adapter.out.redis.RedisBalanceCacheTest.aViewThatCannotBeSerialisedIsLoggedAtErrorAndNotRethrown(RedisBalanceCacheTest.java:62) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
+
+2026-10-27T13:08:37.967Z  WARN 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'failClosedGuard': active profile(s) 'prod' are neither 'standalone' nor 'full' — refusing to start without a known security posture (spec §1)
+2026-10-27T13:08:37.975Z  WARN 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'failClosedGuard': active profile(s) 'load' are neither 'standalone' nor 'full' — refusing to start without a known security posture (spec §1)
+2026-10-27T13:08:37.984Z  WARN 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'failClosedGuard': standalone profile is active but full-mode config 'spring.security.oauth2.resourceserver.jwt.issuer-uri' is present — refusing to start unauthenticated (spec §1)
+2026-10-27T13:08:38.045Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-27T13:08:38.046Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-27T13:08:38.048Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-10-27T13:08:38.168Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-27T13:08:38.168Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-27T13:08:38.170Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-10-27T13:08:38.203Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-27T13:08:38.204Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-27T13:08:38.206Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-10-27T13:08:38.226Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-27T13:08:38.226Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-27T13:08:38.228Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-10-27T13:08:38.243Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-27T13:08:38.243Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-27T13:08:38.244Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-27T13:08:38.260Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-27T13:08:38.260Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-27T13:08:38.262Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-10-27T13:08:38.299Z  WARN 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tenantProvenanceGuard': Failed to instantiate [com.ffroliva.tinyledger.config.TenantProvenanceGuard]: Constructor threw exception
+2026-10-27T13:08:38.318Z  WARN 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tenantProvenanceGuard': Failed to instantiate [com.ffroliva.tinyledger.config.TenantProvenanceGuard]: Constructor threw exception
+2026-10-27T13:08:38.347Z  WARN 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tenantProvenanceGuard': Failed to instantiate [com.ffroliva.tinyledger.config.TenantProvenanceGuard]: Constructor threw exception
+2026-10-27T13:08:38.636Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ffroliva.tinyledger.ledger.adapter.in.web.LedgerControllerTest]: LedgerControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-27T13:08:38.738Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.ledger.adapter.in.web.LedgerControllerTest
+2026-10-27T13:08:38.740Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ffroliva.tinyledger.ledger.adapter.in.web.LedgerControllerTest]: LedgerControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-27T13:08:38.771Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.ledger.adapter.in.web.LedgerControllerTest
+Tiny Ledger (4.1.1)
+
+2026-10-27T13:08:38.868Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.l.a.in.web.LedgerControllerTest    : Starting LedgerControllerTest using Java 25.0.3 with PID 22712 (started by ffrol in C:\development\github\tiny-ledger-sbx-work)
+2026-10-27T13:08:38.869Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.l.a.in.web.LedgerControllerTest    : No active profile set, falling back to 1 default profile: "standalone"
+2026-10-27T13:08:39.553Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-27T13:08:39.553Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-27T13:08:39.555Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-10-27T13:08:39.563Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.l.a.in.web.LedgerControllerTest    : Started LedgerControllerTest in 0.786 seconds (process running for 21.442)
+2026-10-27T13:08:40.064Z ERROR 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,a99496c6-2eca-4ba4-b112-a20f2f1ab791]c.f.t.platform.ErrorHandlingAdvice       : unhandled exception at the API boundary
+
+java.lang.IllegalArgumentException: Invalid UUID string: nope
+	at com.ffroliva.tinyledger.ledger.adapter.in.web.LedgerController.putDeposit(LedgerController.java:78) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:172) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.9.jar:7.0.9]
+	at com.ffroliva.tinyledger.ledger.adapter.in.web.LedgerController$$SpringCGLIB$$2.putDeposit(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:914) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:650) ~[tomcat-embed-core-11.0.25.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.25.jar:6.1]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at com.ffroliva.tinyledger.platform.FapiInteractionIdFilter.doFilterInternal(FapiInteractionIdFilter.java:85) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:199) ~[spring-test-7.0.9.jar:7.0.9]
+	at com.ffroliva.tinyledger.ledger.adapter.in.web.LedgerControllerTest.deposit(LedgerControllerTest.java:520) ~[test-classes/:na]
+	at com.ffroliva.tinyledger.ledger.adapter.in.web.LedgerControllerTest.anUnrelatedIllegalArgumentIsNotReportedAsAnInvalidAmount(LedgerControllerTest.java:331) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
+
+2026-10-27T13:08:40.108Z ERROR 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,4d1d74c1-7c9a-4cf5-9482-5051a844b871]c.f.t.platform.ErrorHandlingAdvice       : unhandled exception at the API boundary
+
+java.lang.RuntimeException: boom with secrets
+	at com.ffroliva.tinyledger.ledger.adapter.in.web.LedgerController.putDeposit(LedgerController.java:78) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:172) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.9.jar:7.0.9]
+	at com.ffroliva.tinyledger.ledger.adapter.in.web.LedgerController$$SpringCGLIB$$2.putDeposit(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:914) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:650) ~[tomcat-embed-core-11.0.25.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.25.jar:6.1]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at com.ffroliva.tinyledger.platform.FapiInteractionIdFilter.doFilterInternal(FapiInteractionIdFilter.java:85) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.9.jar:7.0.9]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:199) ~[spring-test-7.0.9.jar:7.0.9]
+	at com.ffroliva.tinyledger.ledger.adapter.in.web.LedgerControllerTest.deposit(LedgerControllerTest.java:520) ~[test-classes/:na]
+	at com.ffroliva.tinyledger.ledger.adapter.in.web.LedgerControllerTest.unexpectedFailureLeaksNothing(LedgerControllerTest.java:374) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
+
+2026-10-27T13:08:40.740Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ffroliva.tinyledger.platform.ActuatorProbeTest]: ActuatorProbeTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-27T13:08:40.775Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.platform.ActuatorProbeTest
+2026-10-27T13:08:40.776Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ffroliva.tinyledger.platform.ActuatorProbeTest]: ActuatorProbeTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-27T13:08:40.777Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.platform.ActuatorProbeTest
+Tiny Ledger (4.1.1)
+
+2026-10-27T13:08:41.090Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.platform.ActuatorProbeTest         : Starting ActuatorProbeTest using Java 25.0.3 with PID 22712 (started by ffrol in C:\development\github\tiny-ledger-sbx-work)
+2026-10-27T13:08:41.090Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.platform.ActuatorProbeTest         : The following 1 profile is active: "standalone"
+2026-10-27T13:08:41.474Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-27T13:08:41.474Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-10-27T13:08:41.526Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 0 Redis repository interfaces.
+2026-10-27T13:08:41.861Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+2026-10-27T13:08:41.885Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-27T13:08:41.885Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-27T13:08:41.993Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 901 ms
+2026-10-27T13:08:42.473Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 56054 (http) with context path '/'
+2026-10-27T13:08:42.561Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+2026-10-27T13:08:42.563Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-27T13:08:42.564Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-27T13:08:42.628Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 148 ms
+2026-10-27T13:08:42.649Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-27T13:08:42.702Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 56055 (http) with context path '/'
+2026-10-27T13:08:42.709Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.s.config.TaskSchedulerRouter         : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2026-10-27T13:08:42.710Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.platform.ActuatorProbeTest         : Started ActuatorProbeTest in 1.663 seconds (process running for 24.59)
+2026-10-27T13:08:42.716Z  WARN 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.tinyledger.config.RateLimitConfig    : rate limiting is NOT enforced for these IPs (ledger.rate-limit.exempt-ips): [127.0.0.1]
+2026-10-27T13:08:42.717Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.tinyledger.platform.StartupBanner    : Tiny Ledger listening on http://127.0.0.1:0
+2026-10-27T13:08:42.717Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.tinyledger.platform.StartupBanner    : AUTH DISABLED (standalone)
+2026-10-27T13:08:42.938Z  INFO 22712 --- [tiny-ledger] [1-auto-2-exec-2] [tiny-ledger,,,]o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServletRegistration'
+2026-10-27T13:08:42.938Z  INFO 22712 --- [tiny-ledger] [1-auto-2-exec-2] [tiny-ledger,,,]o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServletRegistration'
+2026-10-27T13:08:42.939Z  INFO 22712 --- [tiny-ledger] [1-auto-2-exec-2] [tiny-ledger,,,]o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-27T13:08:43.038Z  INFO 22712 --- [tiny-ledger] [1-auto-1-exec-1] [tiny-ledger,,,]o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-27T13:08:43.038Z  INFO 22712 --- [tiny-ledger] [1-auto-1-exec-1] [tiny-ledger,,,]o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-27T13:08:43.039Z  INFO 22712 --- [tiny-ledger] [1-auto-1-exec-1] [tiny-ledger,,,]o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-27T13:08:43.593Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ffroliva.tinyledger.platform.ForwardedHeaderSpoofingTest]: ForwardedHeaderSpoofingTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-27T13:08:43.595Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.platform.ForwardedHeaderSpoofingTest
+2026-10-27T13:08:43.597Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ffroliva.tinyledger.platform.ForwardedHeaderSpoofingTest]: ForwardedHeaderSpoofingTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-27T13:08:43.597Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.platform.ForwardedHeaderSpoofingTest
+2026-10-27T13:08:43.602Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-27T13:08:43.606Z  INFO 22712 --- [tiny-ledger] [tomcat-shutdown] [tiny-ledger,,,]o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+Tiny Ledger (4.1.1)
+
+2026-10-27T13:08:43.665Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.p.ForwardedHeaderSpoofingTest      : Starting ForwardedHeaderSpoofingTest using Java 25.0.3 with PID 22712 (started by ffrol in C:\development\github\tiny-ledger-sbx-work)
+2026-10-27T13:08:43.665Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.p.ForwardedHeaderSpoofingTest      : The following 1 profile is active: "standalone"
+2026-10-27T13:08:43.980Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-27T13:08:43.981Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-10-27T13:08:44.016Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 0 Redis repository interfaces.
+2026-10-27T13:08:44.091Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+2026-10-27T13:08:44.092Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-27T13:08:44.092Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-27T13:08:44.133Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 467 ms
+2026-10-27T13:08:44.495Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 56085 (http) with context path '/'
+2026-10-27T13:08:44.534Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+2026-10-27T13:08:44.536Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-27T13:08:44.536Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-27T13:08:44.582Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 85 ms
+2026-10-27T13:08:44.590Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-27T13:08:44.614Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 56086 (http) with context path '/'
+2026-10-27T13:08:44.618Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.s.config.TaskSchedulerRouter         : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2026-10-27T13:08:44.620Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.p.ForwardedHeaderSpoofingTest      : Started ForwardedHeaderSpoofingTest in 1.009 seconds (process running for 26.499)
+2026-10-27T13:08:44.621Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.tinyledger.platform.StartupBanner    : Tiny Ledger listening on http://127.0.0.1:0
+2026-10-27T13:08:44.622Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.tinyledger.platform.StartupBanner    : AUTH DISABLED (standalone)
+2026-10-27T13:08:44.634Z  INFO 22712 --- [tiny-ledger] [1-auto-3-exec-1] [tiny-ledger,,,]o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-27T13:08:44.634Z  INFO 22712 --- [tiny-ledger] [1-auto-3-exec-1] [tiny-ledger,,,]o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-27T13:08:44.635Z  INFO 22712 --- [tiny-ledger] [1-auto-3-exec-1] [tiny-ledger,,,]o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-10-27T13:08:44.701Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ffroliva.tinyledger.platform.ForwardedHeaderTrustedProxyTest]: ForwardedHeaderTrustedProxyTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-27T13:08:44.702Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.platform.ForwardedHeaderTrustedProxyTest
+2026-10-27T13:08:44.704Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ffroliva.tinyledger.platform.ForwardedHeaderTrustedProxyTest]: ForwardedHeaderTrustedProxyTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-27T13:08:44.705Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.platform.ForwardedHeaderTrustedProxyTest
+2026-10-27T13:08:44.707Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-27T13:08:44.710Z  INFO 22712 --- [tiny-ledger] [tomcat-shutdown] [tiny-ledger,,,]o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+Tiny Ledger (4.1.1)
+
+2026-10-27T13:08:44.733Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.p.ForwardedHeaderTrustedProxyTest  : Starting ForwardedHeaderTrustedProxyTest using Java 25.0.3 with PID 22712 (started by ffrol in C:\development\github\tiny-ledger-sbx-work)
+2026-10-27T13:08:44.733Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.p.ForwardedHeaderTrustedProxyTest  : The following 1 profile is active: "standalone"
+2026-10-27T13:08:44.995Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-27T13:08:44.995Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-10-27T13:08:45.037Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 0 Redis repository interfaces.
+2026-10-27T13:08:45.106Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+2026-10-27T13:08:45.108Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-27T13:08:45.108Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-27T13:08:45.151Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 417 ms
+2026-10-27T13:08:45.431Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 56090 (http) with context path '/'
+2026-10-27T13:08:45.469Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+2026-10-27T13:08:45.470Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-27T13:08:45.471Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-27T13:08:45.510Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 77 ms
+2026-10-27T13:08:45.518Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-27T13:08:45.548Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 56091 (http) with context path '/'
+2026-10-27T13:08:45.551Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.s.config.TaskSchedulerRouter         : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2026-10-27T13:08:45.553Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.p.ForwardedHeaderTrustedProxyTest  : Started ForwardedHeaderTrustedProxyTest in 0.841 seconds (process running for 27.432)
+2026-10-27T13:08:45.554Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.tinyledger.platform.StartupBanner    : Tiny Ledger listening on http://127.0.0.1:0
+2026-10-27T13:08:45.555Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.tinyledger.platform.StartupBanner    : AUTH DISABLED (standalone)
+2026-10-27T13:08:45.567Z  INFO 22712 --- [tiny-ledger] [1-auto-5-exec-1] [tiny-ledger,,,]o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-27T13:08:45.568Z  INFO 22712 --- [tiny-ledger] [1-auto-5-exec-1] [tiny-ledger,,,]o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-27T13:08:45.568Z  INFO 22712 --- [tiny-ledger] [1-auto-5-exec-1] [tiny-ledger,,,]o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-10-27T13:08:45.619Z  WARN 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.tinyledger.platform.RateLimitFilter  : rate limiter storage unavailable for key 'principal:bob:write', degrading to per-instance limits
+
+io.lettuce.core.RedisException: connection reset (simulated)
+	at com.ffroliva.tinyledger.platform.RateLimitFilterTest.lambda$aBrokenStoreStillCountsAgainstAPerInstanceBucket$0(RateLimitFilterTest.java:173) ~[test-classes/:na]
+	at com.ffroliva.tinyledger.platform.RateLimitFilter.probe(RateLimitFilter.java:195) ~[classes/:na]
+	at com.ffroliva.tinyledger.platform.RateLimitFilter.doFilterInternal(RateLimitFilter.java:106) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at com.ffroliva.tinyledger.platform.RateLimitFilterTest.aBrokenStoreStillCountsAgainstAPerInstanceBucket(RateLimitFilterTest.java:180) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
+
+2026-10-27T13:08:45.620Z  WARN 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.tinyledger.platform.RateLimitFilter  : rate limiter storage unavailable for key 'principal:bob:write', degrading to per-instance limits
+
+io.lettuce.core.RedisException: connection reset (simulated)
+	at com.ffroliva.tinyledger.platform.RateLimitFilterTest.lambda$aBrokenStoreStillCountsAgainstAPerInstanceBucket$0(RateLimitFilterTest.java:173) ~[test-classes/:na]
+	at com.ffroliva.tinyledger.platform.RateLimitFilter.probe(RateLimitFilter.java:195) ~[classes/:na]
+	at com.ffroliva.tinyledger.platform.RateLimitFilter.doFilterInternal(RateLimitFilter.java:106) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at com.ffroliva.tinyledger.platform.RateLimitFilterTest.aBrokenStoreStillCountsAgainstAPerInstanceBucket(RateLimitFilterTest.java:182) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
+
+2026-10-27T13:08:45.629Z  WARN 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.tinyledger.platform.RateLimitFilter  : rate limiter storage unavailable for key 'principal:alice:write', degrading to per-instance limits
+
+io.lettuce.core.RedisException: connection reset (simulated)
+	at com.ffroliva.tinyledger.platform.RateLimitFilterTest.lambda$aStorageFailureFailsOpenInsteadOfPropagating$0(RateLimitFilterTest.java:142) ~[test-classes/:na]
+	at com.ffroliva.tinyledger.platform.RateLimitFilter.probe(RateLimitFilter.java:195) ~[classes/:na]
+	at com.ffroliva.tinyledger.platform.RateLimitFilter.doFilterInternal(RateLimitFilter.java:106) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at com.ffroliva.tinyledger.platform.RateLimitFilterTest.aStorageFailureFailsOpenInsteadOfPropagating(RateLimitFilterTest.java:150) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
+
+2026-10-27T13:08:45.641Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-27T13:08:45.642Z  INFO 22712 --- [tiny-ledger] [tomcat-shutdown] [tiny-ledger,,,]o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-27T13:08:45.648Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-27T13:08:45.649Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-27T13:08:45.650Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-10-27T13:08:45.655Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-27T13:08:45.655Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-27T13:08:45.656Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-27T13:08:48.089Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:48.092Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+Tiny Ledger (4.1.1)
+
+2026-10-27T13:08:48.143Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.cucumber.CucumberSpringConfig      : Starting CucumberSpringConfig using Java 25.0.3 with PID 22712 (started by ffrol in C:\development\github\tiny-ledger-sbx-work)
+2026-10-27T13:08:48.144Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.cucumber.CucumberSpringConfig      : No active profile set, falling back to 1 default profile: "standalone"
+2026-10-27T13:08:48.522Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-27T13:08:48.522Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-10-27T13:08:48.559Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 0 Redis repository interfaces.
+2026-10-27T13:08:48.645Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+2026-10-27T13:08:48.646Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-27T13:08:48.646Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-27T13:08:48.826Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 680 ms
+2026-10-27T13:08:49.093Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 56095 (http) with context path '/'
+2026-10-27T13:08:49.134Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+2026-10-27T13:08:49.134Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-27T13:08:49.136Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.25]
+2026-10-27T13:08:49.184Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 89 ms
+2026-10-27T13:08:49.191Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-27T13:08:49.212Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 56096 (http) with context path '/'
+2026-10-27T13:08:49.215Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.s.s.config.TaskSchedulerRouter         : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2026-10-27T13:08:49.216Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.t.cucumber.CucumberSpringConfig      : Started CucumberSpringConfig in 1.12 seconds (process running for 31.096)
+2026-10-27T13:08:49.217Z  WARN 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.tinyledger.config.RateLimitConfig    : rate limiting is NOT enforced for these IPs (ledger.rate-limit.exempt-ips): [127.0.0.1]
+2026-10-27T13:08:49.217Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.tinyledger.platform.StartupBanner    : Tiny Ledger listening on http://127.0.0.1:0
+2026-10-27T13:08:49.218Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]c.f.tinyledger.platform.StartupBanner    : AUTH DISABLED (standalone)
+2026-10-27T13:08:49.344Z  INFO 22712 --- [tiny-ledger] [1-auto-7-exec-1] [tiny-ledger,,,]o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-27T13:08:49.344Z  INFO 22712 --- [tiny-ledger] [1-auto-7-exec-1] [tiny-ledger,,,]o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-27T13:08:49.346Z  INFO 22712 --- [tiny-ledger] [1-auto-7-exec-1] [tiny-ledger,,,]o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-27T13:08:49.514Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:49.516Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:49.554Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:49.558Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:49.707Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:49.708Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:49.783Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:49.785Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:49.863Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:49.865Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:49.926Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:49.928Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:49.968Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:49.970Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.025Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.027Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.075Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.077Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.147Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.149Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.212Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.214Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.373Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.375Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.420Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.421Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.475Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.476Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.537Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.538Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.601Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.603Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.720Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.722Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.790Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.792Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.836Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.838Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.887Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.888Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.938Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.939Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.987Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:50.989Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:51.038Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:51.040Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:51.096Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:51.097Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:51.154Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:51.157Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:51.197Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:51.200Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:51.243Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:51.245Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:51.301Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:51.304Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:51.363Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:51.364Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:51.425Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:51.426Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:51.493Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T13:08:51.495Z  INFO 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+
+32 scenarios (32 passed)
+208 steps (208 passed)
+0m 3.644s
+2026-10-27T13:08:51.560Z  WARN 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.j.p.l.core.DiscoveryIssueNotifier      : TestEngine with ID 'cucumber' encountered a non-critical issue during test discovery:
+
+(1) [WARNING] The classpath resource selector 'features' should not be used to select features in a package. Use the package selector with 'features' instead
+2026-10-27T13:08:51.561Z  WARN 22712 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.j.p.l.core.DiscoveryIssueNotifier      : TestEngine with ID 'junit-platform-suite' encountered a non-critical issue during test discovery:
+
+(1) [WARNING] [cucumber] The classpath resource selector 'features' should not be used to select features in a package. Use the package selector with 'features' instead (via @Suite com.ffroliva.tinyledger.cucumber.CucumberTest).
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.diffplug.spotless.java.ModuleHelper (file:/C:/Users/ffrol/.m2/repository/com/diffplug/spotless/spotless-lib/4.10.0/spotless-lib-4.10.0.jar)
+WARNING: Please consider reporting this to the maintainers of class com.diffplug.spotless.java.ModuleHelper
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release

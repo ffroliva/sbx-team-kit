@@ -1,0 +1,43 @@
+{
+  "mode": "parallel",
+  "model": "sonnet",
+  "tag": "130223",
+  "branch": "integration-parallel-130223",
+  "create_s": 37,
+  "agents_s": 39,
+  "total_s": 78,
+  "merged": 0,
+  "boxes": 3,
+  "cost_usd": 0,
+  "results": [
+    {
+      "task": "lifo",
+      "sandbox": "p130223-lifo",
+      "exit": 125,
+      "seconds": 30,
+      "collected": null,
+      "parse_error": "WARN: docker hub refresh lock held by another process: context deadline exceeded\nerror: sandbox 'p130223-lifo' not found\n  try: sbx ls"
+    },
+    {
+      "task": "domain-errors",
+      "sandbox": "p130223-domain-errors",
+      "exit": 125,
+      "seconds": 26,
+      "collected": null,
+      "parse_error": "WARN: docker hub refresh lock held by another process: context deadline exceeded\nerror: sandbox 'p130223-domain-errors' not found\n  try: sbx ls"
+    },
+    {
+      "task": "merkle-proof-by-hash",
+      "sandbox": "p130223-merkle-proof-by-hash",
+      "exit": 125,
+      "seconds": 24,
+      "collected": null,
+      "parse_error": "{\"time\":\"2026-10-27T13:03:17.1333935Z\",\"level\":\"WARN\",\"msg\":\"docker hub refresh lock held by another process\",\"error\":\"context deadline exceeded\"}\nWARN: docker hub refresh lock held by another process: context deadline exceeded\nerror: sandbox 'p130223-merkle-proof-by-hash' not found\n  try: sbx ls"
+    }
+  ],
+  "verify": {
+    "exit": 1,
+    "seconds": 1,
+    "tail": "The JAVA_HOME environment variable is not defined correctly,\nthis environment variable is needed to run this program."
+  }
+}

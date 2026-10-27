@@ -1,0 +1,18 @@
+# syntax=docker/sandbox-kit:3
+schemaVersion: "3"
+kind: mixin
+displayName: Team memory (test kit)
+description: Two memory locations to test sbx 0.50 persistence and sharing — a sandbox-private volume and a Kit-shared host mount.
+
+capabilities:
+  # Sandbox-private. Spec: MUST survive restart and recreation of the same sandbox.
+  - type: com.docker.sandbox/volume@1
+    config:
+      path: /home/agent/.claude/projects
+      size: 1g
+  # Shared by every sandbox composing this Kit. Spec: keyed on Kit identity + path; no writer contract.
+  - type: com.docker.sandbox/host-mount@1
+    config:
+      path: /home/agent/team-memory
+
+dockerfile: team-memory.dockerfile

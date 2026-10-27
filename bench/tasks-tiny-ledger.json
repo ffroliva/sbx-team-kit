@@ -1,0 +1,14 @@
+{
+  "lifo": {
+    "prompt": "Add a LIFO strategy to the TaxLotSelector enum in ledger/domain: newest lot first by acquiredAt, ties broken on lotId so a replay is reproducible, exactly like FIFO and HIFO. Cover it in TaxLotSelector's tests (create TaxLotSelectorTest if none exists): ordering, the tie-break, and a partial split of the last consumed lot.",
+    "tests": "TaxLotSelector*Test,TaxLotAggregateTest"
+  },
+  "domain-errors": {
+    "prompt": "Spec §6.5 owes two domain errors that Quantity currently raises as plain IllegalArgumentException: asset mismatch (combining quantities of different symbol or asset class) and excess precision (more than SCALE=6 decimal places). Add AssetMismatchException and ExcessPrecisionException in ledger/domain, both extending IllegalArgumentException so existing callers keep working, and throw them from Quantity. Add QuantityTest cases asserting the new types. Do not touch any adapter or the web layer.",
+    "tests": "Quantity*Test,MultiAssetMovementTest,TaxLotAggregateTest"
+  },
+  "merkle-proof-by-hash": {
+    "prompt": "Add MerkleTree.proofFor(String leafHash) to ledger/domain/MerkleTree: it returns the same inclusion proof as proof(int) for the first leaf equal to leafHash, and throws IllegalArgumentException naming the hash when no leaf matches. Extend MerkleTreeTest: proofFor matches proof(index), the proof verifies with MerkleTree.verify, duplicate leaves resolve to the first, unknown hash throws.",
+    "tests": "MerkleTreeTest"
+  }
+}

@@ -1,0 +1,46 @@
+2026-10-27T12:28:18.792Z  INFO 834 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+
+32 scenarios (32 passed)
+208 steps (208 passed)
+0m 3.562s
+2026-10-27T12:28:18.872Z  WARN 834 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.j.p.l.core.DiscoveryIssueNotifier      : TestEngine with ID 'cucumber' encountered a non-critical issue during test discovery:
+
+(1) [WARNING] The classpath resource selector 'features' should not be used to select features in a package. Use the package selector with 'features' instead
+2026-10-27T12:28:18.874Z  WARN 834 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.j.p.l.core.DiscoveryIssueNotifier      : TestEngine with ID 'junit-platform-suite' encountered a non-critical issue during test discovery:
+
+(1) [WARNING] [cucumber] The classpath resource selector 'features' should not be used to select features in a package. Use the package selector with 'features' instead (via @Suite com.ffroliva.tinyledger.cucumber.CucumberTest).
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.diffplug.spotless.java.ModuleHelper (file:/home/agent/.m2/repository/com/diffplug/spotless/spotless-lib/4.10.0/spotless-lib-4.10.0.jar)
+WARNING: Please consider reporting this to the maintainers of class com.diffplug.spotless.java.ModuleHelper
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+mvn exit=0
+SANDBOX cold: 101s
+2026-10-27T12:29:20.480Z  INFO 1856 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T12:29:20.607Z  INFO 1856 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T12:29:20.609Z  INFO 1856 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T12:29:20.746Z  INFO 1856 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+2026-10-27T12:29:20.747Z  INFO 1856 --- [tiny-ledger] [           main] [tiny-ledger,,,].b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ffroliva.tinyledger.TinyLedgerApplication for test class com.ffroliva.tinyledger.cucumber.CucumberSpringConfig
+
+32 scenarios (32 passed)
+208 steps (208 passed)
+0m 5.406s
+2026-10-27T12:29:20.870Z  WARN 1856 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.j.p.l.core.DiscoveryIssueNotifier      : TestEngine with ID 'cucumber' encountered a non-critical issue during test discovery:
+
+(1) [WARNING] The classpath resource selector 'features' should not be used to select features in a package. Use the package selector with 'features' instead
+2026-10-27T12:29:20.872Z  WARN 1856 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.j.p.l.core.DiscoveryIssueNotifier      : TestEngine with ID 'junit-platform-suite' encountered a non-critical issue during test discovery:
+
+(1) [WARNING] [cucumber] The classpath resource selector 'features' should not be used to select features in a package. Use the package selector with 'features' instead (via @Suite com.ffroliva.tinyledger.cucumber.CucumberTest).
+mvn exit=0
+SANDBOX warm: 54s
+(1) [WARNING] [cucumber] The classpath resource selector 'features' should not be used to select features in a package. Use the package selector with 'features' instead (via @Suite com.ffroliva.tinyledger.cucumber.CucumberTest).
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.diffplug.spotless.java.ModuleHelper (file:/C:/Users/ffrol/.m2/repository/com/diffplug/spotless/spotless-lib/4.10.0/spotless-lib-4.10.0.jar)
+WARNING: Please consider reporting this to the maintainers of class com.diffplug.spotless.java.ModuleHelper
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+HOST cold: 71s exit=0
+
+(1) [WARNING] The classpath resource selector 'features' should not be used to select features in a package. Use the package selector with 'features' instead
+2026-10-27T12:31:41.693Z  WARN 9852 --- [tiny-ledger] [           main] [tiny-ledger,,,]o.j.p.l.core.DiscoveryIssueNotifier      : TestEngine with ID 'junit-platform-suite' encountered a non-critical issue during test discovery:
+
+(1) [WARNING] [cucumber] The classpath resource selector 'features' should not be used to select features in a package. Use the package selector with 'features' instead (via @Suite com.ffroliva.tinyledger.cucumber.CucumberTest).
+HOST warm: 69s exit=0

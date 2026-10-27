@@ -1,0 +1,15 @@
+== cloud mode=parallel model=sonnet tasks=['lifo', 'domain-errors', 'merkle-proof-by-hash'] sandbox=4cpu/8g
+   p132934-lifo: create exit 0 in 14s
+   p132934-domain-errors: create exit 0 in 14s
+   p132934-merkle-proof-by-hash: create exit 0 in 18s
+   lifo: exit 0 88s turns=6 cost=$0.1411127 collected=cad61e0ecf714e9d38dde56345fbe0d37921f379 — FO work; the test run printed no failures, though I only saw its output piped through `tail`.
+
+DONE cad61e0 tests passed
+   domain-errors: exit 0 97s turns=9 cost=$0.14811069999999998 collected=d39b3335b8c2da4d3d3218c0743ad0a8ed485dbd — DONE d39b333 tests passed
+   merkle-proof-by-hash: exit 0 87s turns=4 cost=$0.1111702 collected=b3e7ca171472a00846f06abda8cc570b5ef8f843 — DONE b3e7ca1 tests passed
+== merge collected work into integration branch
+   merge p132934-lifo: ok (1 commits)
+   merge p132934-domain-errors: ok (1 commits)
+   merge p132934-merkle-proof-by-hash: ok (1 commits)
+== full verify on integration-parallel-132934: PASS in 49s
+== create 18s, agents 97s, total 166s, cost $0.4 -> run-parallel-132934.json

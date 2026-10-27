@@ -1,0 +1,55 @@
+{
+  "mode": "parallel",
+  "model": "sonnet",
+  "tag": "132934",
+  "branch": "integration-parallel-132934",
+  "create_s": 18,
+  "agents_s": 97,
+  "total_s": 166,
+  "merged": 3,
+  "boxes": 3,
+  "cost_usd": 0.4,
+  "results": [
+    {
+      "task": "lifo",
+      "sandbox": "p132934-lifo",
+      "exit": 0,
+      "seconds": 88,
+      "collected": "cad61e0ecf714e9d38dde56345fbe0d37921f379",
+      "is_error": false,
+      "num_turns": 6,
+      "duration_ms": 77698,
+      "total_cost_usd": 0.1411127,
+      "result": "Committed the LIFO work; the test run printed no failures, though I only saw its output piped through `tail`.\n\nDONE cad61e0 tests passed"
+    },
+    {
+      "task": "domain-errors",
+      "sandbox": "p132934-domain-errors",
+      "exit": 0,
+      "seconds": 97,
+      "collected": "d39b3335b8c2da4d3d3218c0743ad0a8ed485dbd",
+      "is_error": false,
+      "num_turns": 9,
+      "duration_ms": 85212,
+      "total_cost_usd": 0.14811069999999998,
+      "result": "DONE d39b333 tests passed"
+    },
+    {
+      "task": "merkle-proof-by-hash",
+      "sandbox": "p132934-merkle-proof-by-hash",
+      "exit": 0,
+      "seconds": 87,
+      "collected": "b3e7ca171472a00846f06abda8cc570b5ef8f843",
+      "is_error": false,
+      "num_turns": 4,
+      "duration_ms": 74830,
+      "total_cost_usd": 0.1111702,
+      "result": "DONE b3e7ca1 tests passed"
+    }
+  ],
+  "verify": {
+    "exit": 0,
+    "seconds": 49,
+    "tail": "en called\nWARNING: sun.misc.Unsafe::staticFieldBase has been called by com.diffplug.spotless.java.ModuleHelper (file:/C:/Users/ffrol/.m2/repository/com/diffplug/spotless/spotless-lib/4.10.0/spotless-lib-4.10.0.jar)\nWARNING: Please consider reporting this to the maintainers of class com.diffplug.spotless.java.ModuleHelper\nWARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release"
+  }
+}

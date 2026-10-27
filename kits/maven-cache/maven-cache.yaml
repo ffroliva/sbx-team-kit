@@ -1,0 +1,22 @@
+# syntax=docker/sandbox-kit:3
+schemaVersion: "3"
+kind: mixin
+displayName: Shared Maven cache
+description: Share Maven's local repository across sandboxes composing this Kit, like the spec's pip shared-cache example. No project content is baked in.
+
+capabilities:
+  # Not wrapped in an optional group like the spec's pip example: sbx 0.50 refuses groups on a mixin
+  # added to a built-in agent ("resolve only when it is composed with its workload"). FINDINGS §6.
+  # Concurrent writers are the open question this kit exists to measure.
+  - type: com.docker.sandbox/host-mount@1
+    config:
+      path: /home/agent/.m2/repository
+      mode: "0755"
+  # The runtime creates the mount's parent (~/.m2) as root, so mvnw can't create ~/.m2/wrapper. FINDINGS §6.
+  - type: com.docker.sandbox/lifecycle@1
+    config:
+      startup:
+        - command: [sh, -c, "chown agent:agent /home/agent/.m2"]
+          user: "0"
+          background: false
+          description: Give ~/.m2 back to the agent

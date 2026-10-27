@@ -1,0 +1,40 @@
+{
+  "mode": "parallel",
+  "model": "sonnet",
+  "tag": "123203",
+  "branch": "integration-parallel-123203",
+  "create_s": 12,
+  "agents_s": 1152,
+  "total_s": 1167,
+  "merged": 1,
+  "boxes": 3,
+  "cost_usd": 0,
+  "results": [
+    {
+      "task": "lifo",
+      "sandbox": "p123203-lifo",
+      "exit": 0,
+      "seconds": 576,
+      "parse_error": "etwork repo.maven.apache.org`) and run the specified command.\\n\\nDONE 843ca41 failed\",\"ttft_ms\":3231,\"type\":\"result\",\"duration_ms\":568799,\"uuid\":\"1677d42c-c1b8-42c6-82ae-935b9efb1dc3\",\"ttft_stream_ms\":2390,\"time_to_request_ms\":268,\"first_content_frame_ms\":2390,\"queued_turn_count\":0,\"result_index\":0}"
+    },
+    {
+      "task": "domain-errors",
+      "sandbox": "p123203-domain-errors",
+      "exit": 0,
+      "seconds": 767,
+      "parse_error": "DONE none failed (blocked: Maven distribution download unavailable, nothing committed)\",\"ttft_ms\":3838,\"type\":\"result\",\"duration_ms\":3878,\"uuid\":\"c32d78eb-c363-40b2-87ad-c50323cf5840\",\"ttft_stream_ms\":2246,\"time_to_request_ms\":143,\"first_content_frame_ms\":2247,\"queued_turn_count\":0,\"result_index\":2}"
+    },
+    {
+      "task": "merkle-proof-by-hash",
+      "sandbox": "p123203-merkle-proof-by-hash",
+      "exit": 0,
+      "seconds": 1152,
+      "parse_error": "ad Maven.\\n\\nDONE 179aa03 tests not run (Maven wrapper download blocked by the network)\",\"ttft_ms\":5477,\"type\":\"result\",\"duration_ms\":5490,\"uuid\":\"e022cb53-bc11-4bae-921e-3ac0f7f169a4\",\"ttft_stream_ms\":4035,\"time_to_request_ms\":51,\"first_content_frame_ms\":4036,\"queued_turn_count\":0,\"result_index\":1}"
+    }
+  ],
+  "verify": {
+    "exit": 1,
+    "seconds": 0,
+    "tail": "'mvnw.cmd' is not recognized as an internal or external command,\noperable program or batch file."
+  }
+}

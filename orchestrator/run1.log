@@ -1,0 +1,21 @@
+== create workers (parallel)
+   o-slugify: create exit 0
+   o-duration: create exit 0
+   o-chunk: create exit 0
+== dispatch 3 tasks (parallel, model=haiku)
+   o-slugify: exit 0 in 18s — ed8f0d181a1374b1ceca8bf926484 — `python3 -m unittest -q test_textkit.TestSlugify` passed (1 test, OK). The "done" report to the orchestrator returned no output, so I haven't confirmed it was received.
+   o-duration: exit 0 in 19s — 181f032 — TestParseDuration: Ran 2 tests, OK (the done report returned HTTP 202).
+   o-chunk: exit 0 in 18s — The fix changed `range(0, len(items) - size, size)` to `range(0, len(items), size)` in `chunk` only. The "done" report POST returned no output, so I haven't confirmed the orchestrator received it.
+== collect: fetch each worker's remote and merge into 'integration'
+   merge o-slugify: ok
+   merge o-duration: ok
+   merge o-chunk: ok
+== integration tests: PASS — OK
+== inbox (inbox-223557.jsonl, single writer): 6 messages
+   22:36:26 o-chunk chunk started 
+   22:36:27 o-duration duration started 
+   22:36:28 o-slugify slugify started 
+   22:36:33 o-chunk chunk done python3 -m unittest -q test_textkit.TestChunk: Ran 1 test, OK. Commit 74c5500
+   22:36:34 o-slugify slugify done python3 -m unittest -q test_textkit.TestSlugify: Ran 1 test, OK; commit 3603927
+   22:36:35 o-duration duration done python3 -m unittest -q test_textkit.TestParseDuration: Ran 2 tests, OK; committe
+== total 46s

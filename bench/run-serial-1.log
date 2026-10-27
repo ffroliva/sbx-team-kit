@@ -1,0 +1,9 @@
+== mode=serial model=sonnet tasks=['lifo', 'domain-errors', 'merkle-proof-by-hash'] sandbox=4cpu/4g
+   s130909: create exit 0 in 8s
+   lifo: exit 0 126s turns=8 cost=$0.1188725 collected=78a21b1d13a722a308323a886bc325dcac3fd718 — DONE 78a21b1 tests passed
+   domain-errors: exit 0 47s turns=8 cost=$0.2049853 collected=01c2a58d008dc0c6dc2240363ed2520e2cca93a3 — DONE 01c2a58 tests passed
+   merkle-proof-by-hash: exit 0 30s turns=4 cost=$0.148583 collected=6b3212fb0c617eb25ba00392d40fd27a53c5c6fd — DONE 6b3212f tests passed
+== merge collected work into integration branch
+   merge s130909: ok (3 commits)
+== full verify on integration-serial-130909: PASS in 57s
+== create 8s, agents 206s, total 273s, cost $0.47 -> run-serial-130909.json

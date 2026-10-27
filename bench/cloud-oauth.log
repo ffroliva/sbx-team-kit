@@ -1,0 +1,19 @@
+  ✓ Created sandbox claude/oauthprobe (sbx_001m5yrqqsjt2vtbb52gvm4vgaa, image docker/sandbox-templates:claude-code-docker)
+CREATE 10s
+== claude 2.1.306 (Claude Code)
+== settings.json apiKeyHelper: none
+== auth-related env (names only): SBX_CRED_ANTHROPIC_MODE= 
+== SBX_CRED_ANTHROPIC_MODE=oauth
+== 1. default claude -p (60 s cap)
+rc=0 3s :: CLOUD-OK 
+== 2. raw API shapes through the proxy
+no auth + oauth beta:       200
+x-api-key placeholder:      200
+Bearer placeholder + beta:  200
+== 3. workaround: drop apiKeyHelper, bearer placeholder via CLAUDE_CODE_OAUTH_TOKEN
+apiKeyHelper removed
+#1 rc=0 2s :: CLOUD-OK 
+#2 rc=0 3s :: CLOUD-OK 
+#3 rc=0 2s :: CLOUD-OK 
+No policy log entries found
+Removed sandbox oauthprobe

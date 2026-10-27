@@ -1,0 +1,19 @@
+== mode=parallel model=sonnet tasks=['lifo', 'domain-errors', 'merkle-proof-by-hash'] sandbox=4cpu/4g
+   p123203-lifo: create exit 0 in 12s
+   p123203-domain-errors: create exit 0 in 12s
+   p123203-merkle-proof-by-hash: create exit 0 in 12s
+   lifo: exit 0 576s turns=None cost=$None — c3","ttft_stream_ms":2390,"time_to_request_ms":268,"first_content_frame_ms":2390,"queued_turn_count":0,"result_index":0}
+   domain-errors: exit 0 767s turns=None cost=$None — 40","ttft_stream_ms":2246,"time_to_request_ms":143,"first_content_frame_ms":2247,"queued_turn_count":0,"result_index":2}
+   merkle-proof-by-hash: exit 0 1152s turns=None cost=$None — 9a4","ttft_stream_ms":4035,"time_to_request_ms":51,"first_content_frame_ms":4036,"queued_turn_count":0,"result_index":1}
+== collect into integration branch
+   merge p123203-lifo: CONFLICT/FAIL merge: sandbox-p123203-lifo/main - not something we can merge (fatal: ambiguous argument 'main..sandbox-p123203-lifo/main': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]' commits)
+   merge p123203-domain-errors: CONFLICT/FAIL merge: sandbox-p123203-domain-errors/main - not something we can merge (fatal: ambiguous argument 'main..sandbox-p123203-domain-errors/main': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]' commits)
+   merge p123203-merkle-proof-by-hash: ok (1 commits)
+== full verify on integration-parallel-123203: FAIL in 0s
+'mvnw.cmd' is not recognized as an internal or external command,
+operable program or batch file.
+== create 12s, agents 1152s, total 1167s, cost $0 -> run-parallel-123203.json

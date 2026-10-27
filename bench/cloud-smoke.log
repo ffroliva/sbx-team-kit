@@ -1,0 +1,21 @@
+sbx_001m5ypp9zwbem3het00xsta45f
+
+  ✓ Created sandbox claude/cloudsmoke (sbx_001m5ypp9zwbem3het00xsta45f, image docker/sandbox-templates:claude-code-docker)
+CREATE: 9s
+SANDBOX             AGENT    ID                                STATUS      PORTS   WORKSPACE   CREATED
+claude/cloudsmoke   claude   sbx_001m5ypp9zwbem3het00xsta45f   ● running           -           4s
+HOST=localhost.localdomain
+openjdk version "25.0.4.1" 2026-08-18
+2
+Mem:            3938         184        3368          14         450        3754
+/home/agent/workspace
+CLAUDE.md
+kits-agent-context
+workspace
+github 200
+example 000
+example blocked
+EXEC: 2s
+Warning: no stdin data received in 3s, proceeding without it. If piping from a slow command, redirect stdin explicitly: < /dev/null to skip, or wait longer.
+Not logged in · Please run /login
+CLAUDE: 7s

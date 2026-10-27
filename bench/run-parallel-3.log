@@ -1,0 +1,18 @@
+== mode=parallel model=sonnet tasks=['lifo', 'domain-errors', 'merkle-proof-by-hash'] sandbox=4cpu/4g
+   p130444-lifo: create exit 0 in 8s
+   p130444-domain-errors: create exit 0 in 9s
+   p130444-merkle-proof-by-hash: create exit 0 in 9s
+   lifo: exit 0 136s turns=7 cost=$0.20030169999999997 collected=5d17dbd76bf5886f483406dd6e0dc78e17bc96ee — DONE 5d17dbd tests passed
+   domain-errors: exit 0 139s turns=8 cost=$0.1918842 collected=5e7dfb92b519b4e40626ffee2785d20b1bc2f1a7 — DONE 5e7dfb9 tests passed
+   merkle-proof-by-hash: exit 0 88s turns=4 cost=$0.1384189 collected=f0171749ea606ce603d2fc072f68b46e21404217 — DONE f017174 tests passed
+== merge collected work into integration branch
+   merge p130444-lifo: ok (1 commits)
+   merge p130444-domain-errors: ok (1 commits)
+   merge p130444-merkle-proof-by-hash: ok (1 commits)
+   PR lifo: https://github.com/ffroliva/tiny-ledger/pull/115
+   PR domain-errors: https://github.com/ffroliva/tiny-ledger/pull/116
+   PR merkle-proof-by-hash: https://github.com/ffroliva/tiny-ledger/pull/117
+== full verify on integration-parallel-130444: FAIL in 0s
+The JAVA_HOME environment variable is not defined correctly,
+this environment variable is needed to run this program.
+== create 9s, agents 140s, total 177s, cost $0.53 -> run-parallel-130444.json

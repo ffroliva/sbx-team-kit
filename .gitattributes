@@ -1,0 +1,3 @@
+# Kits copy these files into Linux images; CRLF breaks shell scripts there.
+* text=auto eol=lf
+*.ps1 text eol=crlf

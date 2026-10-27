@@ -1,0 +1,16 @@
+== local mode=onebox model=sonnet tasks=['lifo', 'domain-errors', 'merkle-proof-by-hash'] sandbox=12cpu/12g
+   o155212: create exit 0 in 11s
+   worktree lifo: exit 0 
+   worktree domain-errors: exit 0 
+   worktree merkle-proof-by-hash: exit 0 
+   lifo: exit 0 136s turns=6 cost=$0.1580107 collected=3bb421366f60742a0a9f2600213b4355838fdf3d — Committing is done; nothing left to run.
+
+DONE 3bb4213 tests passed
+   domain-errors: exit 0 111s turns=7 cost=$0.14537689999999998 collected=02527e007dbd85cbf883caf816f3c35848e7d037 — DONE 02527e0 tests passed
+   merkle-proof-by-hash: exit 0 111s turns=4 cost=$0.10619700000000001 collected=28134d68434927de0c2a9b1390ae0821d80b3668 — DONE 28134d6 tests passed
+== merge collected work into integration branch
+   merge refs/bench/o155212-lifo: ok (1 commits)
+   merge refs/bench/o155212-domain-errors: ok (1 commits)
+   merge refs/bench/o155212-merkle-proof-by-hash: ok (1 commits)
+== full verify on integration-onebox-155212: PASS in 69s
+== create 14s, agents 137s, total 223s, cost $0.41 -> run-onebox-155212.json

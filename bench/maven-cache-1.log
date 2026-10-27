@@ -1,0 +1,114 @@
+=== P0 control: private caches, cold
+mc-152802-p1 created 11s
+mc-152802-p3 created 11s
+mc-152802-p2 created 12s
+mc-152802-p3 rc=0 119s
+mc-152802-p2 rc=0 150s
+mc-152802-p1 rc=0 154s
+--- P0 control: private caches, cold: wall 156s for 3 concurrent builds
+=== P1.1 shared cache, cold, 3 writers
+mc-152802-s11 created 11s
+mc-152802-s12 created 11s
+mc-152802-s13 created 12s
+mc-152802-s12 rc=1 11s
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/zipkin/reporter2/zipkin-reporter-bom/3.5.3/zipkin-reporter-bom-3.5.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/zipkin/reporter2/zipkin-reporter-bom/3.5.3/zipkin-reporter-bom-3.5.3.pom (6.1 kB at 98 kB/s)
+[ERROR] Internal error: java.io.UncheckedIOException: java.io.IOException: File exists -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/InternalErrorException
+mc-152802-s11 rc=1 14s
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/zipkin/reporter2/zipkin-reporter-bom/3.5.3/zipkin-reporter-bom-3.5.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/zipkin/reporter2/zipkin-reporter-bom/3.5.3/zipkin-reporter-bom-3.5.3.pom (6.1 kB at 145 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/zipkin/brave/brave-bom/6.3.1/brave-bom-6.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/zipkin/brave/brave-bom/6.3.1/brave-bom-6.3.1.pom (11 kB at 295 kB/s)
+[ERROR] Internal error: java.io.UncheckedIOException: java.io.IOException: File exists -> [Help 1]
+[ERROR] 
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/InternalErrorException
+mc-152802-s13 rc=0 151s
+--- P1.1 shared cache, cold, 3 writers: wall 152s for 3 concurrent builds
+--- P2.1 integrity (checked inside the VM, on the shared mount)
+  ✓ sandbox mc-152802-s11 — started
+jars=442 poms=917 corrupt=0 partial=0 size=207MB
+mc-152802-o1 created 12s
+--- P2.1 offline build from the shared cache:
+mc-152802-o1 rc=0 43s
+=== P1.2 shared cache, cold, 3 writers
+mc-152802-s23 created 12s
+mc-152802-s21 created 12s
+mc-152802-s22 created 13s
+mc-152802-s21 rc=1 5s
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/zipkin/reporter2/zipkin-reporter-bom/3.5.3/zipkin-reporter-bom-3.5.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/zipkin/reporter2/zipkin-reporter-bom/3.5.3/zipkin-reporter-bom-3.5.3.pom (6.1 kB at 92 kB/s)
+[ERROR] Internal error: java.io.UncheckedIOException: java.io.IOException: File exists -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/InternalErrorException
+mc-152802-s22 rc=1 18s
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/zipkin/reporter2/zipkin-reporter-bom/3.5.3/zipkin-reporter-bom-3.5.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/zipkin/reporter2/zipkin-reporter-bom/3.5.3/zipkin-reporter-bom-3.5.3.pom (6.1 kB at 142 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/zipkin/brave/brave-bom/6.3.1/brave-bom-6.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/zipkin/brave/brave-bom/6.3.1/brave-bom-6.3.1.pom (11 kB at 220 kB/s)
+[ERROR] java.io.IOException: File exists
+[ERROR] 
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+mc-152802-s23 rc=1 50s
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/zipkin/brave/brave-bom/6.3.1/brave-bom-6.3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/zipkin/brave/brave-bom/6.3.1/brave-bom-6.3.1.pom (11 kB at 151 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/zipkin/reporter2/zipkin-reporter-bom/3.4.3/zipkin-reporter-bom-3.4.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/zipkin/reporter2/zipkin-reporter-bom/3.4.3/zipkin-reporter-bom-3.4.3.pom (6.4 kB at 88 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/zipkin/brave/brave-bom/6.0.3/brave-bom-6.0.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/zipkin/brave/brave-bom/6.0.3/brave-bom-6.0.3.pom (11 kB at 132 kB/s)
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+--- P1.2 shared cache, cold, 3 writers: wall 51s for 3 concurrent builds
+--- P2.2 integrity (checked inside the VM, on the shared mount)
+  ✓ sandbox mc-152802-s21 — started
+jars=258 poms=530 corrupt=0 partial=0 size=127MB
+mc-152802-o2 created 11s
+--- P2.2 offline build from the shared cache:
+mc-152802-o2 rc=1 5s
+[ERROR] Failed to execute goal org.jacoco:jacoco-maven-plugin:0.8.15:prepare-agent (default) on project tiny-ledger: Execution default of goal org.jacoco:jacoco-maven-plugin:0.8.15:prepare-agent failed: Plugin org.jacoco:jacoco-maven-plugin:0.8.15 or one of its dependencies could not be resolved:
+[ERROR] 	Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.codehaus.plexus:plexus-utils:jar:3.0.24 has not been downloaded from it before.
+[ERROR] 	Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.shared:file-management:jar:3.2.0 has not been downloaded from it before.
+[ERROR] 	Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.reporting:maven-reporting-api:jar:3.0 has not been downloaded from it before.
+[ERROR] 	Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.jacoco:org.jacoco.agent:jar:runtime:0.8.15 has not been downloaded from it before.
+[ERROR] 	Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.jacoco:org.jacoco.core:jar:0.8.15 has not been downloaded from it before.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginResolutionException
+=== P3 shared cache, warm
+mc-152802-w1 created 13s
+mc-152802-w3 created 13s
+mc-152802-w2 created 14s
+mc-152802-w1 rc=1 9s
+[ERROR] java.io.IOException: File exists
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+mc-152802-w2 rc=1 11s
+[ERROR] java.io.IOException: File exists
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+mc-152802-w3 rc=0 92s
+--- P3 shared cache, warm: wall 93s for 3 concurrent builds
+=== done 152802; caches in tmp/m2-152802-*
+No sandboxes found

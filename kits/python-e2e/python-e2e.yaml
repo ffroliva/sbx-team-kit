@@ -1,0 +1,50 @@
+# syntax=docker/sandbox-kit:3
+schemaVersion: "3"
+displayName: Python e2e
+description: >-
+  The shell-docker template with uv, the chosen CPython versions and Playwright's Chromium baked in,
+  for running pytest suites with testcontainers and Playwright without downloading an interpreter
+  or a browser at test time.
+kind: workload
+version: "0.2.0"
+licenses: [Apache-2.0]
+
+args:
+  uvVersion:
+    default: "0.13.4"
+    pattern: '^[0-9]+\.[0-9]+\.[0-9]+$'
+    description: uv release to install
+    buildArg: UV_VERSION
+  pythonVersions:
+    default: "3.14"
+    pattern: '^[0-9]+\.[0-9]+( [0-9]+\.[0-9]+)*$'
+    description: Space-separated CPython versions; the first one runs the Playwright install
+    buildArg: PYTHON_VERSIONS
+  playwrightVersion:
+    default: "1.63.0"
+    pattern: '^[0-9]+\.[0-9]+\.[0-9]+$'
+    description: Must equal the playwright version in the project's lock file, or the browser is fetched again
+    buildArg: PLAYWRIGHT_VERSION
+
+capabilities:
+  - type: com.docker.sandbox/sbx@1
+  - type: com.docker.sandbox/network-policy@1
+    config:
+      runtime:
+        allow:
+          - deb.debian.org
+          - pypi.org
+          - files.pythonhosted.org
+          - registry-1.docker.io
+          - auth.docker.io
+          - production.cloudfront.docker.com
+          - "*.cloudfront.docker.com"
+          - github.com
+          - codeload.github.com
+  - type: com.docker.sandbox/agent-context@1
+    optional: true
+    config:
+      filename: AGENTS.md
+      content: |
+        uv, CPython ${{ kit.args.pythonVersions }} and Playwright ${{ kit.args.playwrightVersion }}'s Chromium
+        and ffmpeg are preinstalled (PLAYWRIGHT_BROWSERS_PATH=/opt/ms-playwright). Run `uv sync --frozen`, then pytest.

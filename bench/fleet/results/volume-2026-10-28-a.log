@@ -1,0 +1,20 @@
+### populate the volume once
+vol_create               rc=0 ms=1081 | Created volume fleet-base (vol_001m5zwyk5q4btq7scfq1fk89y9)
+create_with_volume       ms=8023 | sbx_001m5zwym5xa5kpbm9n9saf6af0
+cp_tgz_once              rc=0 ms=60096 | Copied k-git.tgz to sbx_001m5zwym5xa5kpbm9n9saf6af0:/home/agent/k.tgz
+populate                 rc=2 ms=2903 | tar: Exiting with failure status due to previous errors
+rm_snapshot              rc=0 ms=1372 | Removed sandbox sbx_001m5zwym5xa5kpbm9n9saf6af0
+### two runs at once, each from the volume plus the delta
+vol-a:create             ms=7197 | sbx_001m5zx0vathvzveyy5mywbdf7a
+vol-a:cp_bundle          rc=0 ms=1220 | Copied delta.bundle to sbx_001m5zx0vathvzveyy5mywbdf7a:/home/agent/delta.bundle
+vol-a:checkout           rc=128 ms=1603 | fatal: repository '/vol/k' does not exist
+vol-a:uv_sync_warm       rc=1 ms=1574 | /usr/bin/bash: line 1: cd: /home/agent/k: No such file or directory
+vol-a:pg_pull            rc=0 ms=5605 | docker.io/library/postgres:17-alpine
+vol-a:rm                 rc=0 ms=1829 | Removed sandbox sbx_001m5zx0vathvzveyy5mywbdf7a
+vol-b:create             ms=7068 | sbx_001m5zx0ttsh1vdb8xrvmncda7g
+vol-b:cp_bundle          rc=0 ms=1174 | Copied delta.bundle to sbx_001m5zx0ttsh1vdb8xrvmncda7g:/home/agent/delta.bundle
+vol-b:checkout           rc=128 ms=1588 | fatal: repository '/vol/k' does not exist
+vol-b:uv_sync_warm       rc=1 ms=1762 | /usr/bin/bash: line 1: cd: /home/agent/k: No such file or directory
+vol-b:pg_pull            rc=0 ms=5407 | docker.io/library/postgres:17-alpine
+vol-b:rm                 rc=0 ms=1899 | Removed sandbox sbx_001m5zx0ttsh1vdb8xrvmncda7g
+VOLUME DONE

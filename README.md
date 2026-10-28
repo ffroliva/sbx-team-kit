@@ -28,6 +28,8 @@ Everything here ran on `sbx` 0.50.0 on a Windows 11 host, plus Docker Cloud Sand
 | Shared Maven cache | 3 sandboxes filling one cache at once: 2 of 9 builds pass. Filled by one writer, then shared: 6 of 6 | [FINDINGS §6](FINDINGS.md) |
 | Self-hosted Mem0 kit (spec PR #126) | Two sandboxes start two PostgreSQL servers on one data directory: 4 of 4 runs damaged or destroyed, up to 100 % of acknowledged rows lost | [FINDINGS §1b](FINDINGS.md) |
 | In-run integrity | Kits protect provenance, not what the agent reads during its own run: `sudo` rewrites a baked file, `umount` replaces a `:ro` mount | [FINDINGS §4d](FINDINGS.md) |
+| A 22,000-test suite on a cloud fleet | Kliper's complete Python suite (unit, integration on testcontainers PostgreSQL, Playwright) on 5 × 8 vCPU sandboxes: 750 s on the first green run, 521 s four fixes later, ~$0.48 a run, against 1 h 49 min on a laptop (one run each) | [case](docs/fleet-case-kliper.md), [FINDINGS §8](FINDINGS.md) |
+| Fleet cleanup | A cloud sandbox's scoped secret outlives `rm` and the TTL reaper: a crashed client leaves a live token with no expiry. A killed `create` still completes and bills to its TTL | [FINDINGS §8.1–8.2](FINDINGS.md) |
 | TLS behind a filtering firewall | Post-quantum ClientHellos are dropped; `sbx login` says "signed in" while cloud fails | [bench §3](bench/README.md) |
 
 From that, a design for safe shared agent memory: a single-writer contract with leases and fencing
@@ -53,11 +55,13 @@ kits/pr-review/      read-only review of an untrusted PR; protocol and checks sh
 kits/maven-cache/    Maven's local repository on host-mount@1 (the subject of FINDINGS §6)
 kits/jdk25/          a JDK for the v3 claude workload, copied out of the official image
 kits/team-memory/    a volume@1 and a host-mount@1, to test persistence and sharing
+kits/python-e2e/     uv, CPython, Playwright's Chromium and ffmpeg baked into shell-docker, for pytest fleets
 bench/               parallel_features.py: agents building features in sandboxes, local or cloud
+bench/fleet/         capacity, cold-start, code-transfer and lifecycle probes behind the fleet case
 review/              run_council.py: a multi-reviewer PR review inside one sandbox
 orchestrator/        fan headless workers out to sandboxes, collect through git and a host inbox
 tests/               one script per finding; each FINDINGS section names its script
-docs/                single-writer design; a measured PR review run
+docs/                single-writer design; a measured PR review run; the fleet case
 scripts/upstream.py  status of every upstream issue and PR
 ```
 

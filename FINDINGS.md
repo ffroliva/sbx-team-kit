@@ -343,6 +343,93 @@ Log: [bench/volume-removal-1.log](bench/volume-removal-1.log). sbx v0.50.0, Wind
   which one will change, and whether `sbx rm` will ever offer a way to delete the data.
 - Not tested: where the retained storage lives on the host, and which command (if any: `prune`, `reset`) deletes it.
 
+## 8. Cloud fleets: a 22,000-test Python suite across five sandboxes (measured 27–28 Oct)
+
+The case behind these is [docs/fleet-case-kliper.md](docs/fleet-case-kliper.md): Kliper's complete suite
+(unit, contract, integration on testcontainers PostgreSQL, Playwright) on 5 × 8 vCPU cloud sandboxes, 750 s on the
+first green run, 521 s four fixes later. Scripts: [bench/fleet/](bench/fleet/). Logs: [bench/fleet/results/](bench/fleet/results/).
+Kit: [kits/python-e2e](kits/python-e2e/python-e2e.yaml). sbx v0.50.0 throughout.
+
+Each item was checked against Docker's docs and the CLI help on 28 Oct; where the docs already cover it, the item
+says so and keeps only what is left. Three earlier items were withdrawn on that check: directory `cp` (documented),
+root-owned volumes (documented, with the `chown` fix), and `volume rm` needing `--force` without a terminal
+(documented and consistent with `rm`).
+
+### Fleet lifecycle and credentials
+
+- **8.1 A scoped secret outlives its cloud sandbox, through `rm` and through the TTL reaper.** Script:
+  [bench/fleet/lifecycle.sh](bench/fleet/lifecycle.sh), dummy value, one run. Set `--sandbox <box> github` before
+  `create`; `rm -f <box>`; 30 s later `secret ls --sandbox <box>` still lists it. A box created with
+  `--ttl 2m --on-timeout delete` was reaped on time, and its secret was still listed 30 s later. The `sbx rm`
+  reference says local removal "deletes secrets scoped to each removed sandbox"; for `--cloud` it says only "deletes
+  the sandbox". So a client that dies before its own cleanup leaves a **live token with no expiry**: the TTL bounds
+  the box's cost, nothing bounds the secret. Ask: delete scoped secrets with the cloud sandbox, as locally.
+- **8.2 A `create` whose client is killed still completes, and the box bills until its TTL.** `timeout 3 sbx --cloud
+  create …` exited 124 with no output; the box was listed 12 s later and running for the next 100 s. A caller cannot
+  tell "not created" from "reply lost". The TTL is accurate to about 20 s and is the only reaper. Ask: an idempotent
+  create (a client token), and an opt-in `--delete-on-disconnect`.
+- **8.3 A scoped secret added to a running box never reaches its proxy; set it before `create`.** Set after create,
+  the box's `git fetch` still answered 403; set before `create --name <box>`, a private fetch by full sha took 5 s
+  with no token in `.git`, `~/.gitconfig` or the environment. In the same session, `--command` with `--cloud` was not
+  rejected but prompted for a value, and with stdin closed failed `secret value must not be empty`; the fetch went
+  out with the **global** `github` secret instead. Most of `--command` is documented; what's left is the prompt
+  (refuse it with an error) and the silent fallback to a global secret when a sandbox scope was asked for.
+- **8.4 Overwrite paths disagree.** `secret set github` from stdin replaced an existing global secret with only
+  `Updated`; the reference says `--force` is needed to overwrite "when --token is used". Also minor: `Enter secret:`
+  is printed when the value arrives on stdin, so a script's log reads as hung. The credentials page doesn't show the
+  private-repository `git` recipe that works (8.3).
+
+### Fleet size
+
+- **8.5 The vCPU quota is enforced at create, inconsistently.** Run 5, 8 × 8 vCPU created concurrently, lost one box:
+  `Maximum running vCPU quota reached (56 vCPUs in use, 8 requested, limit 40)`. 56 were already running against 40;
+  the day before, the same 8 × 8 ran without error. A fleet gets a random size, and its run is red because one box
+  never existed. Ask: document the quota, show it with usage (`sbx quota`), and refuse a fleet up front.
+- **8.6 Eight concurrent creates: one fails with HTTP 429** (`apply network policy: resource_exhausted … 429`). The
+  limit is documented; the CLI neither retries nor prints the delay. Ask: retry with the server's delay, or
+  `create --count N`.
+
+### Getting code and tools in
+
+- **8.7 `sbx --cloud cp` is slow and erratic, and a fleet divides one uplink.** The same 81 MB file took 61.7, 33.1 and
+  181.3 s on three boxes (0.4–2.5 MB/s); 100 MB took 60–65 s on a ~1.6 MB/s uplink that every box would share. A
+  depth-1 `git clone` inside the box took 2–7 s. No throughput is documented. `template save --cloud` is a documented
+  fan-out route not yet measured here.
+- **8.8 A new cloud volume is 89 MB and takes no size.** A repository with history or a uv cache (841 MB) does not
+  fit: `No space left on device`. No size in the CLI, the API `Volume` schema or the docs. Ask: `volume create --size`
+  and the size in `inspect`. Sharing one volume between boxes is §7.
+- **8.9 A server-built kit costs 227–325 s on first create, then 16–20 s,** against 7 s for the stock template;
+  `--cloud kit builder status` is "not yet supported in --cloud mode". Once cached, the [python-e2e](kits/python-e2e/)
+  kit saves ~100 s per box per run (Chromium's OS libraries 47 s, the browser 11 s, ffmpeg 56 s). Ask: document the
+  build cache, and allow a prebuild (`sbx kit build --cloud`).
+- **8.10 `sbx kit validate --offline` rejects a v3 source kit** ("this load path has no kit builder configured"), while
+  the help says it "accepts a local directory or ZIP reference". Reproduced on two kits.
+- **8.11 What the templates contain is undocumented.** `shell-docker` ships uv 0.13.4 and CPython 3.14.4, so a cold
+  `uv sync` of 143 packages took ~5 s; the docs say only "Node.js, Python, Go, and Java", with no versions. Ask:
+  versions per template, so kits don't reinstall them.
+
+### Network policy
+
+- **8.12 `docker pull` in `shell-docker` needs `**.docker.com`.** Blobs come from `production.cloudfront.docker.com`,
+  two labels deep, so `*.docker.com` gets `Forbidden`. The wildcard rules are documented and the local Balanced
+  policy allows the CDN; the cloud account policy here was `deny-all`. Ask: publish the Balanced host list and make
+  cloud `balanced` match local.
+- **8.13 Playwright's browser download redirects to `storage.googleapis.com`.** Undocumented. The 403 body names the
+  blocked host, which made it a one-minute fix: keep that. Ask: a host list for common toolchains, or a mode that
+  records blocked hosts during a run.
+
+### Watching a long run
+
+- **8.14 No detached exec in the cloud CLI.** `-d` is "not supported"; a 30-minute run needs `nohup … & disown` and
+  polling execs. The Sandboxes API already has background processes with reconnectable output, so this is a CLI/API
+  parity gap.
+- **8.15 No resource metrics in the cloud.** Choosing workers per box meant sampling `vmstat` and `docker stats` by
+  hand. Ask: per-sandbox CPU, memory and IO (`sbx stats`), which is also what picks a billable shape.
+- **8.16 No cost per sandbox and no run history.** The Usage page lists the rate per shape and lags up to 48 h (both
+  documented); the CLI shows neither rate nor accrued cost, and a deleted box leaves no record of shape, runtime or
+  cost. AI Governance audit records lifecycle events, not usage. Ask: rate and cost in `ls`, and an exportable
+  per-sandbox history.
+
 ## 5. Not tested
 
 - macOS and Linux hosts.

@@ -1,0 +1,20 @@
+### populate the volume once
+vol_create               rc=1 ms=1035 | error: create volume: sbxcloud: conflict already_exists: create volume: Volume name already exists for this ac
+create_with_volume       ms=7181 | sbx_001m5zx20x7jqvqqnecda90qfc6
+cp_tgz_once              rc=0 ms=65078 | Copied k-git.tgz to sbx_001m5zx20x7jqvqqnecda90qfc6:/home/agent/k.tgz
+populate                 rc=2 ms=2657 | tar: Exiting with failure status due to previous errors
+rm_snapshot              rc=0 ms=2750 | Removed sandbox sbx_001m5zx20x7jqvqqnecda90qfc6
+### two runs at once, each from the volume plus the delta
+vol-a:create             ms=8068 | sbx_001m5zx4d7nb3r1sb999dpkck6z
+vol-a:cp_bundle          rc=0 ms=1164 | Copied delta.bundle to sbx_001m5zx4d7nb3r1sb999dpkck6z:/home/agent/delta.bundle
+vol-a:checkout           rc=0 ms=2182 | clone_ms=1214 fetch_ms=-436 head=cc645aca
+vol-a:uv_sync_warm       rc=0 ms=1643 |   cause: failed to create directory `/vol/uv-cache`: No space left on device (os error 28)
+vol-a:pg_pull            rc=0 ms=5356 | docker.io/library/postgres:17-alpine
+vol-a:rm                 rc=0 ms=2679 | Removed sandbox sbx_001m5zx4d7nb3r1sb999dpkck6z
+vol-b:create             ms=8244 | sbx_001m5zx4czzd3vtj2jr22j53ask
+vol-b:cp_bundle          rc=0 ms=1158 | Copied delta.bundle to sbx_001m5zx4czzd3vtj2jr22j53ask:/home/agent/delta.bundle
+vol-b:checkout           rc=0 ms=2787 | clone_ms=711 fetch_ms=454 head=cc645aca
+vol-b:uv_sync_warm       rc=0 ms=1505 |   cause: failed to create directory `/vol/uv-cache`: No space left on device (os error 28)
+vol-b:pg_pull            rc=0 ms=5535 | docker.io/library/postgres:17-alpine
+vol-b:rm                 rc=0 ms=2595 | Removed sandbox sbx_001m5zx4czzd3vtj2jr22j53ask
+VOLUME DONE

@@ -1,0 +1,40 @@
+### stock
+create                       ms=6995 | sbx_001m5zqx9k3j3d6cdrwjq7j3xsh
+first_exec                   rc=0 ms=1852 | 
+copy_repo                    rc=0 ms=61740 | Copied <repo.tgz>
+  uv-cache-before: 
+  python: /usr/bin/python3 uv: uv 0.13.4 (x86_64-unknown-linux-musl)
+  browsers: 
+  untar rc=0 ms=-295 | 
+  uv_sync_cold rc=0 ms=4884 |  + yt-dlp==2026.8.19
+  pw_install rc=0 ms=10943 | Chrome Headless Shell 153.0.8010.12 (playwright chromium-headless-shell v1243) downloaded to /home/a
+  pw_launch rc=1 ms=922 | 
+  pg_pull rc=0 ms=18583 | docker.io/library/postgres:17-alpine
+delete                       rc=0 ms=1831 | Removed sandbox sbx_001m5zqx9k3j3d6cdrwjq7j3xsh
+### kit-first
+create                       ms=226841 | sbx_001m5zr75gw9xep645c9vpm9x2k
+first_exec                   rc=0 ms=1751 | 
+copy_repo                    rc=0 ms=33097 | Copied <repo.tgz>
+  uv-cache-before: 
+  python: /usr/bin/python3 uv: uv 0.13.1 (x86_64-unknown-linux-gnu)
+  browsers: PLAYWRIGHT_VERSION chromium-1243 chromium_headless_shell-1243 ffmpeg-1011 
+  untar rc=0 ms=530 | 
+  uv_sync_cold rc=0 ms=4512 |  + yt-dlp==2026.8.19
+  pw_install rc=1 ms=470458 | Error: EACCES: permission denied, mkdir '/opt/ms-playwright/__dirlock'
+  pw_launch rc=0 ms=1411 | 153.0.8010.12
+  pg_pull rc=0 ms=5101 | docker.io/library/postgres:17-alpine
+delete                       rc=0 ms=1969 | Removed sandbox sbx_001m5zr75gw9xep645c9vpm9x2k
+### kit-cached
+create                       ms=19968 | sbx_001m5zrqvh6jsedfrrc5qd3t5r7
+first_exec                   rc=0 ms=2089 | 
+copy_repo                    rc=0 ms=181301 | Copied <repo.tgz>
+  uv-cache-before: 
+  python: /usr/bin/python3 uv: uv 0.13.1 (x86_64-unknown-linux-gnu)
+  browsers: PLAYWRIGHT_VERSION chromium-1243 chromium_headless_shell-1243 ffmpeg-1011 
+  untar rc=0 ms=477 | 
+  uv_sync_cold rc=0 ms=4057 |  + yt-dlp==2026.8.19
+  pw_install rc=1 ms=470457 | Error: EACCES: permission denied, mkdir '/opt/ms-playwright/__dirlock'
+  pw_launch rc=0 ms=1473 | 153.0.8010.12
+  pg_pull rc=0 ms=5105 | docker.io/library/postgres:17-alpine
+delete                       rc=0 ms=1610 | Removed sandbox sbx_001m5zrqvh6jsedfrrc5qd3t5r7
+COLDSTART DONE

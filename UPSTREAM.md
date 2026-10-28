@@ -20,6 +20,8 @@ Where the project is open source (docker/sandbox-kit-spec), we open the PR ourse
 | Item | What | Depends on |
 |---|---|---|
 | docker/sandbox-kit-spec or sbx-releases (new) | Local `volume@1` data survives `sbx rm` and reattaches by name, against the spec MUST (`volume@1/removal-deletes-storage`); the docs describe the runtime | FINDINGS §7, 2 rounds | known to Docker (docker/docs#26449 notes the spec differs); ask only which side changes, and how `rm` deletes the data |
+| docker/sbx-releases (new) | Cloud `rm` and the TTL reaper leave the sandbox's scoped secret behind (local `rm` deletes it) | FINDINGS §8.1, one run |
+| docker/sbx-releases (new) | Fleet creates: a killed `create` still completes and bills to its TTL; the 40 vCPU quota is enforced inconsistently at create | FINDINGS §8.2, §8.5 |
 | docs/single-writer-design.md | Make the broker (option C) the recommendation: sandboxes write through a host- or platform-side broker that issues fencing tokens. Option B's file lock becomes the single-host case only. Add failure domains: durability locally, a managed service when shared, fail soft (cached reads, queued writes) | — |
 | sandbox-kit-spec: `memory@1` | Spec change: a memory capability served by a broker, declared like `credential@1`. Per-sandbox attribution and policy, fencing tokens, the same API locally and in the cloud. Cites #171, #775, FINDINGS §1, §1b, §6 | the design doc update |
 | sandbox-kit-spec#126 comment | Is one Mem0 sandbox per store the intended model? Two-sandbox measurements (FINDINGS §1b), three Windows-host fixes, offer of a PR. Point to the `memory@1` issue as the general answer | the `memory@1` issue |

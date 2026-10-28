@@ -1,0 +1,47 @@
+[17:01:56 +0s] == P1 scoped secret lifetime
+Enter secret: Created secret github (spike-sec-1793206916)
+[17:02:02 +6s] secret set rc=0
+[17:02:02 +6s] control, before create:
+SCOPE                  SERVICE   TYPE    SECRET   CREATED
+spike-sec-1793206916   github    token   ***      1s
+[17:02:12 +16s] create rc=0
+boxes listed: 1
+before rm: SCOPE                  SERVICE   TYPE    SECRET   CREATED
+before rm: spike-sec-1793206916   github    token   ***      11s
+Removed sandbox spike-sec-1793206916
+[17:02:16 +20s] rm done
+boxes listed after rm: 0
+after rm (30s): SCOPE                  SERVICE   TYPE    SECRET   CREATED
+after rm (30s): spike-sec-1793206916   github    token   ***      45s
+[17:02:48 +52s] secret ls rc=0
+rows naming box in global ls: 1
+[17:02:49 +53s] == P2 create, client killed at 3 s
+[17:02:52 +56s] client rc=124 after 3s
+[17:03:04 +68s] P2 poll 1: listed=1
+[17:03:15 +79s] P2 poll 2: listed=1
+[17:03:27 +91s] P2 poll 3: listed=1
+[17:03:38 +102s] P2 poll 4: listed=1
+[17:03:49 +113s] P2 poll 5: listed=1
+[17:04:00 +124s] P2 poll 6: listed=1
+[17:04:12 +136s] P2 poll 7: listed=1
+[17:04:23 +147s] P2 poll 8: listed=1
+[17:04:34 +158s] P2 poll 9: listed=1
+[17:04:34 +158s] == P3 TTL 3m, delete, no client
+[17:04:41 +165s] create rc=0 in 7s
+ttl: Expires in 2m (MAX remaining: 23h59m).
+ttl: Expires at: 2026-10-28T17:07:36Z
+ls: shell/spike-ttl-1793206916   shell   sbx_001m61qh0yyae66wdpw876z28qk   ● running           -           3s
+[17:05:05 +189s] P3 poll 1: listed=1
+[17:05:26 +210s] P3 poll 2: listed=1
+[17:05:47 +231s] P3 poll 3: listed=1
+[17:06:08 +252s] P3 poll 4: listed=1
+[17:06:29 +273s] P3 poll 5: listed=1
+[17:06:50 +294s] P3 poll 6: listed=1
+[17:07:11 +315s] P3 poll 7: listed=1
+[17:07:32 +336s] P3 poll 8: listed=1
+[17:07:53 +357s] P3 poll 9: listed=0
+[17:07:53 +357s] P3 gone
+[17:07:53 +357s] == cleanup
+spike boxes left: 0
+spike secrets left: 0
+[17:08:03 +367s] done

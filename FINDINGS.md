@@ -290,6 +290,56 @@ afterwards and reads it.
 - The ask: refuse the second attach, as the schema says; or offer a real shared or read-only mode. At the least,
   warn at attach that the other box's writes will be lost.
 
+### Where shared storage is defined: the kit spec, the CLI and Docker (28 Oct)
+
+The volume tested above sits outside the kit spec. `sbx --cloud volume create` plus `--volume NAME:PATH` is an
+account-level cloud resource, marked experimental and handled by the CLI and API. No kit declares it, no spec text
+governs it, and no conformance test (TCK) covers it.
+
+| Mechanism | Defined in | Shared between sandboxes? | Coordination |
+|---|---|---|---|
+| `volume@1` | kit spec | **never**: "One sandbox-private storage destination"; "Two sandboxes composing identical Kits have independent storage" | none needed |
+| `host-mount@1` | kit spec | yes: a live host folder, local only | "Kits coordinate access", with no locking (§1, §6, spec#171) |
+| `sbx --cloud volume` | CLI and API, outside the spec | yes, in practice: a private copy per box | none: the last to exit wins (above) |
+| Docker named volume (`docker volume create`, Compose) | Docker Engine | yes, live: one filesystem | none from Docker; containers share one kernel, so the tools' own file locks can work |
+
+- **A kit cannot declare cloud storage that several sandboxes share.** The shared storage that does exist has no
+  coordination rules anywhere. That is the gap the planned `memory@1` issue addresses.
+- **Docker volumes, measured for comparison** (Docker 28.3.0): a second `docker volume create` with the same name
+  returns 0 and the existing volume, where sbx cloud refuses it with `conflict already_exists`. Two containers
+  mounted it at once, and B saw A's file while both ran. Docker shares one live filesystem; sbx cloud hands each box a
+  copy and keeps the last one.
+- In `volume@1`'s cloud support row, Docker's docs say cloud sandboxes "use ordinary sandbox disk at the declared
+  paths, including for tmpfs requests". So in the cloud even private kit volumes don't outlive the box.
+
+### Local `volume@1`: data survives `sbx rm` (measured 28 Oct; the spec says it must not)
+
+The spec and Docker's docs disagree here:
+- The spec requires: "Removing a sandbox instance **MUST** delete all its volume storage… Creating another sandbox
+  with the same name or Kits allocates a new instance with fresh storage", and "A name is an alias, not storage
+  identity".
+- The docs (use-kits) say local volumes "keep data across… sandbox removal" and are reattached "when the sandbox
+  name, kit source, and volume path match".
+
+Kit: [kits/volume-probe](kits/volume-probe/volume-probe.yaml), one block `volume@1` and nothing else, composed on
+`docker.io/docker/sbx-kit-claude:2.1.311`. Script: [tests/volume-removal-test.sh](tests/volume-removal-test.sh).
+Log: [bench/volume-removal-1.log](bench/volume-removal-1.log). sbx v0.50.0, Windows 11, two rounds.
+
+| Step | Spec says | Docs say | Measured, both rounds |
+|---|---|---|---|
+| `sbx stop`, then exec | data kept | kept | **kept** |
+| `sbx rm -f`, recreate with the **same name** and kit | **fresh** | reattached | **reattached**: the marker from before `rm` is there |
+| Recreate under **another name**, same kit | fresh | fresh | **fresh** |
+
+- **The docs describe the runtime; the runtime breaks a spec MUST.** The TCK case
+  `volume@1/removal-deletes-storage` would fail.
+- **In practice, the name is the storage identity**, which is the opposite of the spec's "a name is an alias".
+- **`sbx rm` does not delete a kit volume's data.** Anything an agent wrote there survives removal: tokens, caches,
+  memory. It reappears in the next sandbox that reuses the name with the same kit and path, even when that
+  sandbox is meant to be unrelated. The fresh volume is agent-owned (the spec's SHOULD, met locally), and is a real
+  block filesystem (`lost+found`).
+- Not tested: where the retained storage lives on the host, and which command (if any: `prune`, `reset`) deletes it.
+
 ## 5. Not tested
 
 - macOS and Linux hosts.

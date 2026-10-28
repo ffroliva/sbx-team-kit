@@ -1,0 +1,13 @@
+# syntax=docker/sandbox-kit:3
+# Test mixin: one block volume@1, to check whether its data survives sandbox removal.
+schemaVersion: "3"
+kind: mixin
+displayName: volume@1 probe
+description: One block volume at /home/agent/voltest, nothing else.
+version: "0.1.0"
+licenses: [Apache-2.0]
+capabilities:
+  - type: com.docker.sandbox/volume@1
+    config:
+      path: /home/agent/voltest
+      size: 64m

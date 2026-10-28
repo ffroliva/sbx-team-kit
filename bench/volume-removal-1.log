@@ -1,0 +1,153 @@
+[08:53:23] $ sbx version
+    sbx version v0.50.0 30d023cbbf9af1204c91b1605b2a7a49b931d2bf
+[08:53:23] rc=0
+[08:53:23] ===== round 1
+[08:53:23] $ sbx create --name voltest-1 --no-progress docker.io/docker/sbx-kit-claude:2.1.311 --kit ./voltest
+    
+    KITS
+      ○ ./voltest — building…
+      ✓ ./voltest — built (3s)
+          sbx-kit-src:voltest-82b72e7034da
+    Note: no binding authorizes anthropic — the credential was not injected. Create a binding (re-run interactively, or edit ~/.config/sbx/credentials.yaml) to use it.
+    
+      ✓ Created sandbox voltest-1
+[08:53:49] rc=0
+[08:53:49] $ sbx exec voltest-1 sh -c mount | grep voltest; ls -la /home/agent/voltest; echo round1-$(date +%s) > /home/agent/voltest/marker && cat /home/agent/voltest/marker
+    sh: 1: mount: not found
+    total 22
+    drwxr-xr-x 4 agent agent  1024 Oct 28 08:53 .
+    drwxr-xr-x 1 agent agent  4096 Oct 28 08:53 ..
+    drwx------ 2 root  root   1024 Oct 28 08:53 .sbx-volume-initialized
+    drwx------ 2 root  root  12288 Oct 28 08:53 lost+found
+    round1-1793177629
+[08:53:49] rc=0
+[08:53:49] --- stop + exec (spec: MUST persist across restart)
+[08:53:49] $ sbx stop voltest-1
+    Stopped sandbox voltest-1
+[08:53:50] rc=0
+[08:53:50] $ sbx exec voltest-1 cat /home/agent/voltest/marker
+      ✓ sandbox voltest-1 — started
+    round1-1793177629
+[08:53:54] rc=0
+[08:53:55] --- remove, recreate same name and kit (spec: fresh; docs: reattached)
+[08:53:55] $ sbx rm -f voltest-1
+    Removed sandbox voltest-1
+[08:53:56] rc=0
+[08:53:56] $ sbx create --name voltest-1 --no-progress docker.io/docker/sbx-kit-claude:2.1.311 --kit ./voltest
+    
+    KITS
+      ✓ ./voltest — cached
+          sbx-kit-src:voltest-82b72e7034da
+    Note: no binding authorizes anthropic — the credential was not injected. Create a binding (re-run interactively, or edit ~/.config/sbx/credentials.yaml) to use it.
+    
+      ✓ Created sandbox voltest-1
+[08:54:03] rc=0
+[08:54:03] $ sbx exec voltest-1 sh -c ls -la /home/agent/voltest; cat /home/agent/voltest/marker
+    total 23
+    drwxr-xr-x 4 agent agent  1024 Oct 28 08:53 .
+    drwxr-xr-x 1 agent agent  4096 Oct 28 08:54 ..
+    drwx------ 2 root  root   1024 Oct 28 08:53 .sbx-volume-initialized
+    drwx------ 2 root  root  12288 Oct 28 08:53 lost+found
+    -rw-r--r-- 1 agent agent    18 Oct 28 08:53 marker
+    round1-1793177629
+[08:54:04] rc=0
+[08:54:04] $ sbx rm -f voltest-1
+    Removed sandbox voltest-1
+[08:54:05] rc=0
+[08:54:05] --- control: other name, same kit (both: fresh)
+[08:54:05] $ sbx create --name voltest-x1 --no-progress docker.io/docker/sbx-kit-claude:2.1.311 --kit ./voltest
+    
+    KITS
+      ✓ ./voltest — cached
+          sbx-kit-src:voltest-82b72e7034da
+    Note: no binding authorizes anthropic — the credential was not injected. Create a binding (re-run interactively, or edit ~/.config/sbx/credentials.yaml) to use it.
+    
+      ✓ Created sandbox voltest-x1
+[08:54:12] rc=0
+[08:54:12] $ sbx exec voltest-x1 sh -c ls -la /home/agent/voltest; cat /home/agent/voltest/marker
+    total 22
+    drwxr-xr-x 4 agent agent  1024 Oct 28 08:54 .
+    drwxr-xr-x 1 agent agent  4096 Oct 28 08:54 ..
+    drwx------ 2 root  root   1024 Oct 28 08:54 .sbx-volume-initialized
+    drwx------ 2 root  root  12288 Oct 28 08:54 lost+found
+    cat: /home/agent/voltest/marker: No such file or directory
+[08:54:12] rc=1
+[08:54:12] $ sbx rm -f voltest-x1
+    Removed sandbox voltest-x1
+[08:54:13] rc=0
+[08:54:13] ===== round 2
+[08:54:13] $ sbx create --name voltest-2 --no-progress docker.io/docker/sbx-kit-claude:2.1.311 --kit ./voltest
+    
+    KITS
+      ✓ ./voltest — cached
+          sbx-kit-src:voltest-82b72e7034da
+    Note: no binding authorizes anthropic — the credential was not injected. Create a binding (re-run interactively, or edit ~/.config/sbx/credentials.yaml) to use it.
+    
+      ✓ Created sandbox voltest-2
+[08:54:24] rc=0
+[08:54:24] $ sbx exec voltest-2 sh -c mount | grep voltest; ls -la /home/agent/voltest; echo round2-$(date +%s) > /home/agent/voltest/marker && cat /home/agent/voltest/marker
+    sh: 1: mount: not found
+    total 22
+    drwxr-xr-x 4 agent agent  1024 Oct 28 08:54 .
+    drwxr-xr-x 1 agent agent  4096 Oct 28 08:54 ..
+    drwx------ 2 root  root   1024 Oct 28 08:54 .sbx-volume-initialized
+    drwx------ 2 root  root  12288 Oct 28 08:54 lost+found
+    round2-1793177664
+[08:54:24] rc=0
+[08:54:24] --- stop + exec (spec: MUST persist across restart)
+[08:54:24] $ sbx stop voltest-2
+    Stopped sandbox voltest-2
+[08:54:25] rc=0
+[08:54:25] $ sbx exec voltest-2 cat /home/agent/voltest/marker
+      ✓ sandbox voltest-2 — started
+    round2-1793177664
+[08:54:29] rc=0
+[08:54:29] --- remove, recreate same name and kit (spec: fresh; docs: reattached)
+[08:54:29] $ sbx rm -f voltest-2
+    Removed sandbox voltest-2
+[08:54:30] rc=0
+[08:54:30] $ sbx create --name voltest-2 --no-progress docker.io/docker/sbx-kit-claude:2.1.311 --kit ./voltest
+    
+    KITS
+      ✓ ./voltest — cached
+          sbx-kit-src:voltest-82b72e7034da
+    Note: no binding authorizes anthropic — the credential was not injected. Create a binding (re-run interactively, or edit ~/.config/sbx/credentials.yaml) to use it.
+    
+      ✓ Created sandbox voltest-2
+[08:54:37] rc=0
+[08:54:37] $ sbx exec voltest-2 sh -c ls -la /home/agent/voltest; cat /home/agent/voltest/marker
+    total 23
+    drwxr-xr-x 4 agent agent  1024 Oct 28 08:54 .
+    drwxr-xr-x 1 agent agent  4096 Oct 28 08:54 ..
+    drwx------ 2 root  root   1024 Oct 28 08:54 .sbx-volume-initialized
+    drwx------ 2 root  root  12288 Oct 28 08:54 lost+found
+    -rw-r--r-- 1 agent agent    18 Oct 28 08:54 marker
+    round2-1793177664
+[08:54:38] rc=0
+[08:54:38] $ sbx rm -f voltest-2
+    Removed sandbox voltest-2
+[08:54:39] rc=0
+[08:54:39] --- control: other name, same kit (both: fresh)
+[08:54:39] $ sbx create --name voltest-x2 --no-progress docker.io/docker/sbx-kit-claude:2.1.311 --kit ./voltest
+    
+    KITS
+      ✓ ./voltest — cached
+          sbx-kit-src:voltest-82b72e7034da
+    Note: no binding authorizes anthropic — the credential was not injected. Create a binding (re-run interactively, or edit ~/.config/sbx/credentials.yaml) to use it.
+    
+      ✓ Created sandbox voltest-x2
+[08:54:46] rc=0
+[08:54:46] $ sbx exec voltest-x2 sh -c ls -la /home/agent/voltest; cat /home/agent/voltest/marker
+    total 22
+    drwxr-xr-x 4 agent agent  1024 Oct 28 08:54 .
+    drwxr-xr-x 1 agent agent  4096 Oct 28 08:54 ..
+    drwx------ 2 root  root   1024 Oct 28 08:54 .sbx-volume-initialized
+    drwx------ 2 root  root  12288 Oct 28 08:54 lost+found
+    cat: /home/agent/voltest/marker: No such file or directory
+[08:54:46] rc=1
+[08:54:46] $ sbx rm -f voltest-x2
+    Removed sandbox voltest-x2
+[08:54:47] rc=0
+[08:54:47] $ sbx ls
+    No sandboxes found
+[08:54:48] rc=0

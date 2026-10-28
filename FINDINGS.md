@@ -257,6 +257,39 @@ logs [bench/maven-cache-1.log](bench/maven-cache-1.log), [bench/maven-cache-2.lo
 | `host-mount@1` at `/home/agent/.m2/repository` creates the **parent `~/.m2` owned by root**, so `mvnw` can't create `~/.m2/wrapper` (every build failed in 0 s) | Workaround: a root `startup` hook `chown agent:agent /home/agent/.m2`. The spec's SHOULD covers only the mount root |
 | `--mount HOST:PATH` binds a host dir chosen by the user to a kit's `host-mount@1` path; writes flow both ways | Lets a test start from an empty cache |
 
+## 7. Cloud volumes: two sandboxes on one volume, and the last to exit wins (measured 28 Oct)
+
+Cloud volumes (`sbx --cloud volume`) are a different mechanism from §1. They are cloud-side storage, and `sbx`
+forwards to the Cloud Sandboxes API: the local `sandboxd` and no host folder are involved. The docs disagree on
+whether two sandboxes may share one:
+
+- The API schema `AttachmentMode` has one value, `exclusive`: "permits one sandbox to attach the volume read-write",
+  and "never silently enables shared writers".
+- The CLI cloud usage page says: "If multiple sandboxes mount the same volume at the same time, the last sandbox to
+  exit overwrites the stored snapshot."
+
+Script: [tests/cloud-volume-test.sh](tests/cloud-volume-test.sh). Log: [bench/cloud-volume-1.log](bench/cloud-volume-1.log).
+Setup: sbx v0.50.0, 2 vCPU `shell` boxes. Two rounds, with the exit order swapped; a third box mounts the volume
+afterwards and reads it.
+
+| | Round 1: A exits first | Round 2: B exits first |
+|---|---|---|
+| Second box attaches while the first holds the volume | yes, no warning | yes, no warning |
+| A box sees the other's new file | no, each box has its own copy | no |
+| What the reader finds | B's file only: **A's write lost** | A's file plus round 1's file: **B's write lost** |
+| Exit codes | all 0 | all 0 |
+
+- **The CLI page describes what happens; the API's `exclusive` is not enforced on this path.**
+- **The loss is silent and whole-box.** Each sandbox works on a private copy, and the volume becomes the copy of
+  whichever exits last. Every command returned 0.
+- **§1 has the same shape at a different layer.** Locally, a shared host folder is live, and writes are lost because
+  locks don't cross VMs. In the cloud, nothing is live at all, and every write of every box but one is dropped at
+  exit. In both, the safe pattern is one writer.
+- A first run is void: Git Bash rewrote `/vol` in `sbx --cloud exec` arguments into a Windows path, so the writes
+  never happened. The script sets `MSYS_NO_PATHCONV=1` for that reason. That run still showed the concurrent attach.
+- The ask: refuse the second attach, as the schema says; or offer a real shared or read-only mode. At the least,
+  warn at attach that the other box's writes will be lost.
+
 ## 5. Not tested
 
 - macOS and Linux hosts.

@@ -19,6 +19,7 @@ Where the project is open source (docker/sandbox-kit-spec), we open the PR ourse
 
 | Item | What | Depends on |
 |---|---|---|
+| docker/sbx-releases (new) | Cloud volumes: a second sandbox attaches a volume despite `AttachmentMode: exclusive`; the last to exit silently replaces the other's writes | FINDINGS §7, 2 rounds | needs the owner's go |
 | docs/single-writer-design.md | Make the broker (option C) the recommendation: sandboxes write through a host- or platform-side broker that issues fencing tokens. Option B's file lock becomes the single-host case only. Add failure domains: durability locally, a managed service when shared, fail soft (cached reads, queued writes) | — |
 | sandbox-kit-spec: `memory@1` | Spec change: a memory capability served by a broker, declared like `credential@1`. Per-sandbox attribution and policy, fencing tokens, the same API locally and in the cloud. Cites #171, #775, FINDINGS §1, §1b, §6 | the design doc update |
 | sandbox-kit-spec#126 comment | Is one Mem0 sandbox per store the intended model? Two-sandbox measurements (FINDINGS §1b), three Windows-host fixes, offer of a PR. Point to the `memory@1` issue as the general answer | the `memory@1` issue |

@@ -1,0 +1,123 @@
+[08:21:34] $ sbx version
+    sbx version v0.50.0 30d023cbbf9af1204c91b1605b2a7a49b931d2bf
+[08:21:34] rc=0
+[08:21:34] $ sbx --cloud volume create n1b-0821
+    Created volume n1b-0821 (vol_001m60skch8w049wy63kspgyrsw)
+[08:21:35] rc=0
+[08:21:35] ===== round 1
+[08:21:35] $ sbx --cloud create --name n1-a1 --volume n1b-0821:/vol --on-timeout delete --ttl 30m --no-progress shell
+    sbx_001m60skdjc7cm8bf8x1p13bfwa
+    
+      ✓ Created sandbox shell/n1-a1 (sbx_001m60skdjc7cm8bf8x1p13bfwa, image docker/sandbox-templates:shell-docker)
+[08:21:42] rc=0
+[08:21:42] $ sbx --cloud exec n1-a1 sudo chown agent:agent /vol
+[08:21:44] rc=0
+[08:21:44] $ sbx --cloud create --name n1-b1 --volume n1b-0821:/vol --on-timeout delete --ttl 30m --no-progress shell
+    sbx_001m60skp28nm7sjh5zsfbrkfpk
+    
+      ✓ Created sandbox shell/n1-b1 (sbx_001m60skp28nm7sjh5zsfbrkfpk, image docker/sandbox-templates:shell-docker)
+[08:21:51] rc=0
+[08:21:51] $ sbx --cloud exec n1-b1 sudo chown agent:agent /vol
+[08:21:52] rc=0
+[08:21:52] $ sbx --cloud exec n1-a1 sh -c echo A1 > /vol/a1.txt && ls -la /vol
+    total 10
+    drwxr-xr-x  2 agent agent 1024 Oct 28 08:21 .
+    drwxr-xr-x+ 1 root  root  4096 Oct 28 08:21 ..
+    -rw-r--r--  1 agent agent    3 Oct 28 08:21 a1.txt
+[08:21:54] rc=0
+[08:21:54] $ sbx --cloud exec n1-b1 sh -c echo B1 > /vol/b1.txt && ls -la /vol
+    total 10
+    drwxr-xr-x  2 agent agent 1024 Oct 28 08:21 .
+    drwxr-xr-x+ 1 root  root  4096 Oct 28 08:21 ..
+    -rw-r--r--  1 agent agent    3 Oct 28 08:21 b1.txt
+[08:21:56] rc=0
+[08:21:56] $ sbx --cloud rm -f n1-a1
+      ○ removing sandbox n1-a1
+    Removed sandbox n1-a1
+[08:21:58] rc=0
+[08:22:18] $ sbx --cloud rm -f n1-b1
+      ○ removing sandbox n1-b1
+    Removed sandbox n1-b1
+[08:22:20] rc=0
+[08:22:50] $ sbx --cloud create --name n1-r1 --volume n1b-0821:/vol --on-timeout delete --ttl 30m --no-progress shell
+    sbx_001m60snp7pvw8g74vee82cjvsa
+    
+      ✓ Created sandbox shell/n1-r1 (sbx_001m60snp7pvw8g74vee82cjvsa, image docker/sandbox-templates:shell-docker)
+[08:22:57] rc=0
+[08:22:57] $ sbx --cloud exec n1-r1 sh -c ls -la /vol; cat /vol/*.txt
+    total 10
+    drwxr-xr-x  2 agent agent 1024 Oct 28 08:21 .
+    drwxr-xr-x+ 1 root  root  4096 Oct 28 08:22 ..
+    -rw-r--r--  1 agent agent    3 Oct 28 08:21 b1.txt
+    B1
+[08:22:59] rc=0
+[08:22:59] $ sbx --cloud rm -f n1-r1
+      ○ removing sandbox n1-r1
+    Removed sandbox n1-r1
+[08:23:00] rc=0
+[08:23:30] ===== round 2
+[08:23:30] $ sbx --cloud create --name n1-a2 --volume n1b-0821:/vol --on-timeout delete --ttl 30m --no-progress shell
+    sbx_001m60spy0fydg3mvykv8qvh1nz
+    
+      ✓ Created sandbox shell/n1-a2 (sbx_001m60spy0fydg3mvykv8qvh1nz, image docker/sandbox-templates:shell-docker)
+[08:23:37] rc=0
+[08:23:37] $ sbx --cloud exec n1-a2 sudo chown agent:agent /vol
+[08:23:39] rc=0
+[08:23:39] $ sbx --cloud create --name n1-b2 --volume n1b-0821:/vol --on-timeout delete --ttl 30m --no-progress shell
+    sbx_001m60sq67f4brc9xa28jffbdr1
+    
+      ✓ Created sandbox shell/n1-b2 (sbx_001m60sq67f4brc9xa28jffbdr1, image docker/sandbox-templates:shell-docker)
+[08:23:46] rc=0
+[08:23:46] $ sbx --cloud exec n1-b2 sudo chown agent:agent /vol
+[08:23:48] rc=0
+[08:23:48] $ sbx --cloud exec n1-a2 sh -c echo A2 > /vol/a2.txt && ls -la /vol
+    total 11
+    drwxr-xr-x  2 agent agent 1024 Oct 28 08:23 .
+    drwxr-xr-x+ 1 root  root  4096 Oct 28 08:23 ..
+    -rw-r--r--  1 agent agent    3 Oct 28 08:23 a2.txt
+    -rw-r--r--  1 agent agent    3 Oct 28 08:21 b1.txt
+[08:23:50] rc=0
+[08:23:50] $ sbx --cloud exec n1-b2 sh -c echo B2 > /vol/b2.txt && ls -la /vol
+    total 11
+    drwxr-xr-x  2 agent agent 1024 Oct 28 08:23 .
+    drwxr-xr-x+ 1 root  root  4096 Oct 28 08:23 ..
+    -rw-r--r--  1 agent agent    3 Oct 28 08:21 b1.txt
+    -rw-r--r--  1 agent agent    3 Oct 28 08:23 b2.txt
+[08:23:52] rc=0
+[08:23:52] $ sbx --cloud rm -f n1-b2
+      ○ removing sandbox n1-b2
+    Removed sandbox n1-b2
+[08:23:54] rc=0
+[08:24:14] $ sbx --cloud rm -f n1-a2
+      ○ removing sandbox n1-a2
+    Removed sandbox n1-a2
+[08:24:16] rc=0
+[08:24:46] $ sbx --cloud create --name n1-r2 --volume n1b-0821:/vol --on-timeout delete --ttl 30m --no-progress shell
+    sbx_001m60ss79qa4j58dgdagx9svwy
+    
+      ✓ Created sandbox shell/n1-r2 (sbx_001m60ss79qa4j58dgdagx9svwy, image docker/sandbox-templates:shell-docker)
+[08:24:52] rc=0
+[08:24:52] $ sbx --cloud exec n1-r2 sh -c ls -la /vol; cat /vol/*.txt
+    total 11
+    drwxr-xr-x  2 agent agent 1024 Oct 28 08:23 .
+    drwxr-xr-x+ 1 root  root  4096 Oct 28 08:24 ..
+    -rw-r--r--  1 agent agent    3 Oct 28 08:23 a2.txt
+    -rw-r--r--  1 agent agent    3 Oct 28 08:21 b1.txt
+    A2
+    B1
+[08:24:54] rc=0
+[08:24:54] $ sbx --cloud rm -f n1-r2
+      ○ removing sandbox n1-r2
+    Removed sandbox n1-r2
+[08:24:56] rc=0
+[08:25:26] $ sbx --cloud volume inspect n1b-0821
+      Name:     n1b-0821
+      ID:       vol_001m60skch8w049wy63kspgyrsw
+      Created:  3m ago
+[08:25:27] rc=0
+[08:25:27] $ sbx --cloud volume rm -f n1b-0821
+    Removed volume n1b-0821
+[08:25:28] rc=0
+[08:25:28] $ sbx --cloud ls
+    No sandboxes found
+[08:25:29] rc=0

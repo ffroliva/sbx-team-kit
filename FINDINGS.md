@@ -338,6 +338,9 @@ Log: [bench/volume-removal-1.log](bench/volume-removal-1.log). sbx v0.50.0, Wind
   memory. It reappears in the next sandbox that reuses the name with the same kit and path, even when that
   sandbox is meant to be unrelated. The fresh volume is agent-owned (the spec's SHOULD, met locally), and is a real
   block filesystem (`lost+found`).
+- **Docker already knows about the mismatch.** The docs PR for 0.50 (docker/docs#26449) says: "Volume retention follows
+  the 0.50 implementation; the upstream spec's main branch describes a different storage lifecycle." What's open is
+  which one will change, and whether `sbx rm` will ever offer a way to delete the data.
 - Not tested: where the retained storage lives on the host, and which command (if any: `prune`, `reset`) deletes it.
 
 ## 5. Not tested

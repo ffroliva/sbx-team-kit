@@ -20,6 +20,10 @@ Evidence:
   (council A1, A2).
 - [bench/cli/sbx-api-surface-2026-10-30.log](../bench/cli/sbx-api-surface-2026-10-30.log): the paths of the published
   OpenAPI document and a count of the terms below (council C1, C2).
+- [bench/cli/sbx-ui-rpc-surface-2026-10-30.log](../bench/cli/sbx-ui-rpc-surface-2026-10-30.log): the internal API the
+  web dashboard calls, captured as shapes only ([method](ui-api-capture-method.md); FINDINGS 8.19). It has no events,
+  stats, history or quota method either. A sandbox there carries status, state, size, expiry and `onTimeout`, but no
+  runtime, cost or exit reason. Usage is per size and date range only, and prices are per second per size.
 
 Column *API v1* says whether the HTTP API has it (council C1, D1). "Help" means the help text was read; the command
 was not run.
@@ -150,7 +154,8 @@ host-wide load figure would be a side channel across tenants, so it is not asked
 
 ## 6. Open questions for Docker
 
-1. The billing increment and minimum per box (council C11).
+1. The billing minimum per box (council C11). The dashboard prices each size per second (FINDINGS 8.19); is there a
+   minimum, and does a hibernated box bill (a new box hibernates, not deletes, on timeout)?
 2. Event and history retention (council C open question 3).
 3. Fleet as CLI verb, API resource or SDK recipes (council D3).
 4. Build caching across boxes stays a kit concern, outside this proposal (council D4).

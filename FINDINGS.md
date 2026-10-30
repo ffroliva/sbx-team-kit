@@ -459,6 +459,22 @@ root-owned volumes (documented, with the `chown` fix), and `volume rm` needing `
   host load can't be told apart yet. Before sending: confirm PSI directly in a box, capture the in-guest CPU
   benchmark (before and after each run) in a normal and a slow run, and re-check the docs. Ask: a contention signal for
   the caller's own sandbox that moves when its work slows (guest steal does not), PSI, and a dedicated-vCPU shape.
+- **8.19 DRAFT, captured once: the web dashboard's own API has no events, stats, history or quota either.** Method:
+  [docs/ui-api-capture-method.md](docs/ui-api-capture-method.md). Evidence:
+  [bench/cli/sbx-ui-rpc-surface-2026-10-30.log](bench/cli/sbx-ui-rpc-surface-2026-10-30.log). The dashboard calls an
+  internal Connect-RPC API (`/api/platform.v1.<Service>/<Method>`), not the published REST API.
+  - A sandbox, as `ListSandboxes`/`GetSandbox` return it: id, name, `status` and `state` (two fields: `ready` while
+    `running`), created and expires times, cpus, memory, size enum, image, kit, platform, `autoResume`, `onTimeout`.
+    No runtime, no cost, no exit reason, no labels.
+  - A new cloud sandbox expires 60 min after creation with `onTimeout: hibernate` and `autoResume: true`: on timeout it
+    is hibernated, not deleted.
+  - Use is reported only per size and per date range (`GetSandboxUsage`: runtime seconds per size), never per sandbox.
+    Prices are per second per size (`GetComputePricing`).
+  - A deleted sandbox disappears from both the dashboard list and `sbx ls --cloud` (8.16 seen from the other side).
+  - No method for events, stats, metrics, history or quota was seen on the wire or in the decoded descriptors (which
+    are incomplete: they cover only the pages visited).
+
+  Caveats: one capture, one account. Re-capture on the current version before sending.
 
 ## 5. Not tested
 

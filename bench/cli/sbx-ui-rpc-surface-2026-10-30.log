@@ -1,0 +1,295 @@
+# Docker Sandboxes web dashboard (agentic-platform.docker.com): the API it calls. Captured 30 Oct 2026, one capture.
+# sbx v0.50.0 on the same account. Method: docs/ui-api-capture-method.md. Shapes only: every value is replaced by its
+# type ("string", "int64-string", "timestamp", "boolean"), except enum constants, which are kept. No ids, tokens,
+# cookies, names or account data. The raw HAR stayed on the capturing machine and is not in this repository.
+#
+# Transport: POST https://agentic-platform.docker.com/api/<package>.v1.<Service>/<Method>, JSON body, Connect
+# protocol (header connect-protocol-version), Authorization: Bearer. Protobuf JSON mapping: int64 as strings, empty
+# lists omitted. This is not the published REST API (/v1/..., 42 paths, sbx-api-surface-2026-10-30.log).
+#
+# Live probe (15:38 UTC): `sbx --cloud create shell --name rpc-probe --cpus 1 --memory 2g`; the dashboard's sandbox
+# page opened; Pause clicked; Delete clicked and confirmed. It lived a few minutes on the smallest size.
+#   GetSandbox: status=ready while state=running (two fields); expiresAt - createdAt = 60 min; onTimeout=hibernate;
+#     autoResume=true; platform=linux/amd64; sandboxVmSize=SANDBOX_VM_SIZE_CPU1_MEM2.
+#   GetSandbox.metadata: six provider API-key names, each value the literal placeholder "proxy-managed" (credentials
+#     are injected by the proxy; no secret is returned).
+#   Pause in the dashboard calls HibernateSandbox; `sbx ls --cloud` then showed "stopping" for about 20 s, then
+#     "stopped"; Delete is disabled while stopping. The page then offers "Restore to connect".
+#   DeleteSandbox returns {} at once; the next ListSandboxes returned 0 sandboxes, `sbx ls --cloud` "No sandboxes found".
+#     A deleted sandbox leaves no record in either list.
+#   Request bodies: every per-sandbox method takes {"sandboxId": string}; ListSandboxes takes {"limit": int}, no
+#     pageToken or filter seen.
+#
+# Methods: decoded from the protobuf descriptors embedded in the 89 JavaScript chunks the visited pages loaded.
+# Chunks of pages not visited may hold more. Methods seen on the wire but missing from the decoded list
+# (HibernateSandbox, DeleteSandbox, CreateSandboxTerminalToken, GetSandboxMCPServers, GetBillingSummary,
+# GetPromotionalCreditStatus, ListCommunityKits, ListUserMCPServers, GetHostedMCPEndpoint) confirm that the decoded list
+# is incomplete. Not seen anywhere: a create-sandbox method, any streaming method, events, stats, metrics, history,
+# quota.
+#
+# Not captured: the response shapes of GetBillingSummary and GetPromotionalCreditStatus (seen in the first capture,
+# not re-read); create from the dashboard; an exec or process call.
+{
+ "methods": {
+  "files": 17,
+  "auth.v1": [
+   "BootstrapFromCookie(BootstrapFromCookieRequest) -> BootstrapFromCookieResponse",
+   "DiscoverEligibleAccounts(DiscoverEligibleAccountsRequest) -> DiscoverEligibleAccountsResponse",
+   "ExchangeToken(ExchangeTokenRequest) -> ExchangeTokenResponse",
+   "GetCurrentUser(GetCurrentUserRequest) -> GetCurrentUserResponse",
+   "GetFeatureFlags(GetFeatureFlagsRequest) -> GetFeatureFlagsResponseB",
+   "Logout(LogoutRequest) -> LogoutResponse"
+  ],
+  "auth.v1 services": [
+   "AuthService",
+   "FeatureFlagsService",
+   "UserService"
+  ],
+  "platform.v1": [
+   "CompleteAnthropicCodeLogin(CompleteAnthropicCodeLoginRequest) -> CompleteAnthropicCodeLoginResponse",
+   "CreateCustomSecret(CreateCustomSecretRequest) -> CreateCustomSecretResponse",
+   "CreateSSHKey(CreateSSHKeyRequest) -> CreateSSHKeyResponse",
+   "CreateUserMCPServer(CreateUserMCPServerRequest) -> CreateUserMCPServerResponse",
+   "DeleteCustomSecret(DeleteCustomSecretRequest) -> DeleteCustomSecretResponse",
+   "DeletePolicy(DeletePolicyRequest) -> DeletePolicyResponseB",
+   "DeleteSSHKey(DeleteSSHKeyRequest) -> DeleteSSHKeyResponse",
+   "DeleteSecret(DeleteSecretRequest) -> DeleteSecretResponse",
+   "DeleteTrialSandbox(DeleteTrialSandboxRequest) -> DeleteTrialSandboxResponse",
+   "DeleteUserMCPServer(DeleteUserMCPServerRequest) -> DeleteUserMCPServerResponse",
+   "DisconnectUserMCPServer(DisconnectUserMCPServerRequest) -> DisconnectUserMCPServerResponseB",
+   "GetComputePricing(GetComputePricingRequest) -> GetComputePricingResponse",
+   "GetPaymentMethod(GetPaymentMethodRequest) -> GetPaymentMethodResponse",
+   "GetRemoteMCPAuthURL(GetRemoteMCPAuthURLRequest) -> GetRemoteMCPAuthURLResponse",
+   "GetSandbox(GetSandboxRequest) -> GetSandboxResponse",
+   "GetSandboxHarness(GetSandboxHarnessRequest) -> GetSandboxHarnessResponse",
+   "GetSandboxKitRun(GetSandboxKitRunRequest) -> GetSandboxKitRunResponse",
+   "GetSandboxUsage(GetSandboxUsageRequest) -> GetSandboxUsageResponse",
+   "GetTrialInfo(GetTrialInfoRequest) -> GetTrialInfoResponse",
+   "GetTrialRun(GetTrialRunRequest) -> GetTrialRunResponse",
+   "GetUserMCPServer(GetUserMCPServerRequest) -> GetUserMCPServerResponse",
+   "GrantPromotionalCredit(GrantPromotionalCreditRequest) -> GrantPromotionalCreditResponseB",
+   "ListHarnesses(ListHarnessesRequest) -> ListHarnessesResponseB",
+   "ListHostedMCPGateways(ListHostedMCPGatewaysRequest) -> ListHostedMCPGatewaysResponse",
+   "ListMyAccounts(ListMyAccountsRequest) -> ListMyAccountsResponse",
+   "ListPolicies(ListPoliciesRequest) -> ListPoliciesResponse",
+   "ListRemoteMCPServers(ListRemoteMCPServersRequest) -> ListRemoteMCPServersResponse",
+   "ListSandboxKits(ListSandboxKitsRequest) -> ListSandboxKitsResponse",
+   "ListSandboxPorts(ListSandboxPortsRequest) -> ListSandboxPortsResponse",
+   "ListSandboxes(ListSandboxesRequest) -> ListSandboxesResponse",
+   "ListSecrets(ListSecretsRequest) -> ListSecretsResponse",
+   "PutSecret(PutSecretRequest) -> PutSecretResponse",
+   "ResolveCustomKit(ResolveCustomKitRequest) -> ResolveCustomKitResponse",
+   "ResumeSandbox(ResumeSandboxRequest) -> ResumeSandboxResponse",
+   "SetActiveAccount(SetActiveAccountRequest) -> SetActiveAccountResponseB",
+   "TerminateSandboxTerminalSession(TerminateSandboxTerminalSessionRequest) -> TerminateSandboxTerminalSessionResponse",
+   "UnpublishSandboxPort(UnpublishSandboxPortRequest) -> UnpublishSandboxPortResponseB",
+   "UpdateGitIdentity(UpdateGitIdentityRequest) -> UpdateGitIdentityResponse",
+   "UpdatePolicy(UpdatePolicyRequest) -> UpdatePolicyResponse"
+  ],
+  "platform.v1 services": [
+   "AccountService",
+   "BillingService",
+   "HarnessService",
+   "RemoteMCPService",
+   "SandboxCloudService",
+   "SandboxKitService",
+   "TrialService",
+   "UserMCPServerService",
+   "UserPolicyService"
+  ]
+ },
+ "shapes": {
+  "platform.v1.BillingService/GetComputePricing": {
+   "rates": [
+    {
+     "rateCardKey": "string",
+     "featureKey": "string",
+     "name": "string",
+     "description": "string",
+     "unitAmount": "string",
+     "unit": "string",
+     "vmSize": "enum:SANDBOX_VM_SIZE_CPU1_MEM2"
+    },
+    "\u00e2\u20ac\u00a6n=5"
+   ],
+   "isAccountPrice": "boolean"
+  },
+  "platform.v1.BillingService/GetSandboxUsage": {
+   "shapes": [
+    {
+     "vmSize": "enum:SANDBOX_VM_SIZE_CPU8_MEM16",
+     "shape": "string",
+     "runtimeSeconds": "number",
+     "cpus": "number",
+     "memoryMib": "int64-string"
+    },
+    "\u00e2\u20ac\u00a6n=4"
+   ],
+   "totalRuntimeSeconds": "number"
+  },
+  "platform.v1.HarnessService/ListHarnesses": {
+   "harnesses": [
+    {
+     "slug": "string",
+     "displayName": "string"
+    },
+    "\u00e2\u20ac\u00a6n=9"
+   ]
+  },
+  "platform.v1.RemoteMCPService/GetHostedMCPEndpoint": {
+   "code": "string",
+   "message": "string"
+  },
+  "platform.v1.RemoteMCPService/ListRemoteMCPServers": {
+   "servers": [
+    {
+     "name": "string",
+     "displayName": "string",
+     "description": "string",
+     "transport": "string",
+     "oauthRequired": "boolean"
+    },
+    "\u00e2\u20ac\u00a6n=8"
+   ],
+   "connections": [
+    {
+     "serverName": "string"
+    },
+    "\u00e2\u20ac\u00a6n=8"
+   ]
+  },
+  "platform.v1.SandboxCloudService/ListCustomSecrets": {},
+  "platform.v1.SandboxCloudService/ListSandboxes": {
+   "sandboxes": [
+    {
+     "sandboxId": "string",
+     "status": "string",
+     "createdAt": "timestamp",
+     "expiresAt": "timestamp",
+     "cpus": "int64-string",
+     "memoryMiB": "int64-string",
+     "image": "string",
+     "name": "string",
+     "state": "string",
+     "autoResume": "boolean",
+     "onTimeout": "string",
+     "kit": "string",
+     "sandboxVmSize": "enum:SANDBOX_VM_SIZE_CPU1_MEM2"
+    },
+    "\u00e2\u20ac\u00a6n=1"
+   ]
+  },
+  "platform.v1.SandboxCloudService/ListSecrets": {
+   "secrets": [
+    {
+     "name": "string",
+     "serviceType": "string",
+     "type": "string",
+     "createdAt": "timestamp",
+     "updatedAt": "timestamp"
+    },
+    "\u00e2\u20ac\u00a6n=2"
+   ]
+  },
+  "platform.v1.SandboxKitService/ListSandboxKits": {
+   "kits": [
+    {
+     "name": "string",
+     "description": "string",
+     "secrets": [
+      {
+       "serviceType": "string",
+       "label": "string",
+       "requirement": "enum:KIT_SECRET_REQUIREMENT_REQUIRED",
+       "populated": "boolean",
+       "envName": "enum:ANTHROPIC_API_KEY"
+      },
+      "\u00e2\u20ac\u00a6n=2"
+     ],
+     "ready": "boolean",
+     "allowNetworks": [
+      "string",
+      "\u00e2\u20ac\u00a6n=13"
+     ],
+     "cliRef": "string",
+     "format": "enum:KIT_FORMAT_V2",
+     "hub": {
+      "ociRef": "string",
+      "name": "string",
+      "description": "string",
+      "publisher": "string",
+      "logoUrl": "string",
+      "pullCount": "int64-string",
+      "formats": [
+       "enum:KIT_FORMAT_V2",
+       "\u00e2\u20ac\u00a6n=1"
+      ],
+      "updatedAt": "timestamp"
+     }
+    },
+    "\u00e2\u20ac\u00a6n=8"
+   ]
+  },
+  "platform.v1.UserMCPServerService/ListUserMCPServers": {},
+  "platform.v1.UserPolicyService/ListPolicies": {
+   "policies": [
+    {
+     "id": "string",
+     "name": "string",
+     "rules": [
+      {
+       "id": "string",
+       "name": "string",
+       "actions": [
+        "enum:ALLOWLIST_ACTION_NET_CONNECT_TCP",
+        "\u00e2\u20ac\u00a6n=1"
+       ],
+       "resources": [
+        "string",
+        "\u00e2\u20ac\u00a6n=23"
+       ],
+       "decision": "enum:ALLOWLIST_DECISION_ALLOW"
+      },
+      "\u00e2\u20ac\u00a6n=6"
+     ],
+     "createdAt": "timestamp",
+     "updatedAt": "timestamp",
+     "isDefault": "boolean"
+    },
+    "\u00e2\u20ac\u00a6n=2"
+   ]
+  },
+  "platform.v1.SandboxCloudService/CreateSandboxTerminalToken": {
+   "token": "string"
+  },
+  "platform.v1.SandboxCloudService/GetSandbox": {
+   "sandbox": {
+    "sandboxId": "string",
+    "status": "string",
+    "createdAt": "timestamp",
+    "expiresAt": "timestamp",
+    "cpus": "int64-string",
+    "memoryMiB": "int64-string",
+    "image": "string",
+    "name": "string",
+    "state": "string",
+    "autoResume": "boolean",
+    "onTimeout": "string",
+    "metadata": {
+     "ANTHROPIC_API_KEY": "string",
+     "GOOGLE_API_KEY": "string",
+     "MISTRAL_API_KEY": "string",
+     "NEBIUS_API_KEY": "string",
+     "OPENAI_API_KEY": "string",
+     "XAI_API_KEY": "string"
+    },
+    "kit": "string",
+    "sandboxVmSize": "enum:SANDBOX_VM_SIZE_CPU1_MEM2",
+    "platform": "string"
+   }
+  },
+  "platform.v1.SandboxCloudService/GetSandboxHarness": {
+   "harness": "string"
+  }
+ }
+}

@@ -1,0 +1,16 @@
+# 2026-10-30T16:53:44Z sbx version v0.50.1 ddb0268d7124b9cf98955d0b08ffd71a0dfcebe4 host=x86_64
+A  r1 sbx/claude:latest no kit: FAIL 1.7 error: agent "claude" is already registered (built-in agents cannot be overridden by a kit)
+A+ r1 sbx/claude:latest + jdk kit: FAIL 1.7 error: agent "claude" is already registered (built-in agents cannot be overridden by a kit)
+B  r1 v3 workload + jdk mixin: ok 9.9
+   first java 0.6s: openjdk version "25.0.4.1" 2026-08-18 LTS
+W  r1 v3 workload alone: ok 7.9
+   download: 12.3s 303MB openjdk version "25.0.5" 2026-10-20 LTS
+   apt: rc=0 1.4s [default-jdk-headless:  Candidate: 2:1.21-76+dhi0] E: Unable to locate package openjdk-25-jdk-headless 
+A  r2 sbx/claude:latest no kit: FAIL 1.8 error: agent "claude" is already registered (built-in agents cannot be overridden by a kit)
+A+ r2 sbx/claude:latest + jdk kit: FAIL 1.5 error: agent "claude" is already registered (built-in agents cannot be overridden by a kit)
+B  r2 v3 workload + jdk mixin: ok 7.4
+   first java 0.5s: openjdk version "25.0.4.1" 2026-08-18 LTS
+W  r2 v3 workload alone: ok 6.5
+   download: 12.3s 303MB openjdk version "25.0.5" 2026-10-20 LTS
+   apt: rc=0 1.0s [default-jdk-headless:  Candidate: 2:1.21-76+dhi0] E: Unable to locate package openjdk-25-jdk-headless 
+# done 2026-10-30T16:55:10Z

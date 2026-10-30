@@ -1,0 +1,14 @@
+# 2026-10-30T16:48:48Z sbx version v0.50.0 30d023cbbf9af1204c91b1605b2a7a49b931d2bf host=x86_64
+A r1 CREATE-FAILED 1.7 s: error: agent "claude" is already registered (built-in agents cannot be overridden by a kit) 
+B r1 create=6.7s setup=0.0s(rc=0) first_java=0.5s total=7.2s jdk_mb=253 java='openjdk version "25.0.4.1" 2026-08-18 LTS'
+C r1 create=7.0s setup=0.7s(rc=2) first_java=1.6s total=9.3s jdk_mb=? java=''
+   setup tail: gzip: stdin: unexpected end of file tar: Child returned status 1 tar: Error is not recoverable: exiting now 
+D r1 create=6.5s setup=0.6s(rc=100) first_java=0.7s total=7.8s jdk_mb=? java=''
+   setup tail: E: Could not get lock /var/lib/apt/lists/lock. It is held by process 418 (apt-get) E: Unable to lock directory /var/lib/apt/lists/ 
+A r2 CREATE-FAILED 1.5 s: error: agent "claude" is already registered (built-in agents cannot be overridden by a kit) 
+B r2 create=7.0s setup=0.0s(rc=0) first_java=0.7s total=7.8s jdk_mb=253 java='openjdk version "25.0.4.1" 2026-08-18 LTS'
+C r2 create=6.3s setup=0.6s(rc=2) first_java=0.7s total=7.6s jdk_mb=? java=''
+   setup tail: gzip: stdin: unexpected end of file tar: Child returned status 1 tar: Error is not recoverable: exiting now 
+D r2 create=6.9s setup=0.5s(rc=100) first_java=0.8s total=8.2s jdk_mb=? java=''
+   setup tail: E: Could not get lock /var/lib/apt/lists/lock. It is held by process 417 (apt-get) E: Unable to lock directory /var/lib/apt/lists/ 
+# done 2026-10-30T16:49:55Z

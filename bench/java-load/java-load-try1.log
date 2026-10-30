@@ -1,0 +1,10 @@
+# 2026-10-30T16:46:49Z sbx version v0.50.0 30d023cbbf9af1204c91b1605b2a7a49b931d2bf host=x86_64
+A r1 CREATE-FAILED 1.8 s: error: agent "claude" is already registered (built-in agents cannot be overridden by a kit) 
+B r1 create=18.5s setup=0.0s(rc=0) first_java=0.7s total=19.3s jdk_mb=253 java=''
+C r1 CREATE-FAILED 10.1 s:   ✗ C:/development/github/sbx-kits-contrib/mise — build failed (9s) error: resolve kits: kit "C:/development/github/sbx-kits-contrib/mise": build kit C:/development/github/sbx-kits-contrib/mise: e
+D r1 create=7.6s setup=0.5s(rc=0) first_java=0.5s total=8.6s jdk_mb=? java='sh: 1: java: not found'
+A r2 CREATE-FAILED 1.5 s: error: agent "claude" is already registered (built-in agents cannot be overridden by a kit) 
+B r2 create=6.9s setup=0.0s(rc=0) first_java=0.5s total=7.4s jdk_mb=253 java=''
+C r2 CREATE-FAILED 4.7 s:   ✗ C:/development/github/sbx-kits-contrib/mise — build failed (3s) error: resolve kits: kit "C:/development/github/sbx-kits-contrib/mise": build kit C:/development/github/sbx-kits-contrib/mise: e
+D r2 create=6.7s setup=0.5s(rc=0) first_java=1.2s total=8.4s jdk_mb=? java='sh: 1: java: not found'
+# done 2026-10-30T16:48:06Z

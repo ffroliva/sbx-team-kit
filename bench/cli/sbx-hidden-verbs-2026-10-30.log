@@ -1,0 +1,37 @@
+# sbx sbx version v0.50.0 30d023cbbf9af1204c91b1605b2a7a49b931d2bf -- probe: 'sbx <verb> --help', line 2. A verb that prints the root description does not exist (control: zzznotaverb).
+events         Subscribe to the daemon event stream and print events as they occur.
+inspect        Show a human-readable summary of a sandbox: its agent, kits, state, auth mode, workspace and mounts, network policy, secrets, published ports, and active sessions.
+stats          Docker Sandboxes creates isolated sandbox environments for AI agents, powered by Docker.
+top            Docker Sandboxes creates isolated sandbox environments for AI agents, powered by Docker.
+logs           Docker Sandboxes creates isolated sandbox environments for AI agents, powered by Docker.
+metrics        Docker Sandboxes creates isolated sandbox environments for AI agents, powered by Docker.
+usage          Docker Sandboxes creates isolated sandbox environments for AI agents, powered by Docker.
+history        Docker Sandboxes creates isolated sandbox environments for AI agents, powered by Docker.
+quota          Docker Sandboxes creates isolated sandbox environments for AI agents, powered by Docker.
+wait           Docker Sandboxes creates isolated sandbox environments for AI agents, powered by Docker.
+status         Docker Sandboxes creates isolated sandbox environments for AI agents, powered by Docker.
+zzznotaverb    Docker Sandboxes creates isolated sandbox environments for AI agents, powered by Docker.
+## --cloud
+--cloud events error: 'sbx events' is not yet supported in --cloud mode; see help for the current set of cloud-supported verbs
+--cloud inspect Description:
+--cloud tui  Description:
+## sbx events --help
+Description:
+  Subscribe to the daemon event stream and print events as they occur.
+
+  Pass one or more event-type families to filter (e.g. "sandbox.lifecycle");
+  with no arguments, all events are streamed. Matching is by dot-boundary
+  prefix, so "sandbox.lifecycle" also selects "sandbox.lifecycle.*".
+
+  The stream runs until interrupted (Ctrl-C).
+
+Usage:
+  sbx events [TYPE...] [flags]
+
+Flags:
+  -h, --help   help for events
+      --json   Output in JSON format
+
+Global Flags:
+      --cloud   Dispatch to Docker Cloud Sandboxes API instead of local sandboxd (supported by a growing set of verbs — run 'sbx --cloud --help' for the current list)
+  -D, --debug   Enable debug logging

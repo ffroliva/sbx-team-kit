@@ -1,0 +1,57 @@
+# Docker Sandboxes OpenAPI, fetched 2026-10-30 from https://docs.docker.com/reference/api/sandboxes/api.yaml
+# info.version: v1; 360743 bytes; 42 paths
+/v1/files
+/v1/files/content
+/v1/files/directories
+/v1/files/download
+/v1/files/move
+/v1/files/stat
+/v1/files/upload
+/v1/identity/exchange
+/v1/images
+/v1/images/{image}
+/v1/images/{image}/pull-spec
+/v1/mcp-servers/{mcpServer}/authorization
+/v1/mcp-servers/{mcpServer}/authorization/authorize
+/v1/network-policies
+/v1/policy-logs
+/v1/processes
+/v1/processes/exec
+/v1/processes/{process}
+/v1/processes/{process}/interact
+/v1/processes/{process}/output
+/v1/processes/{process}/signal
+/v1/sandboxes
+/v1/sandboxes/{sandbox}
+/v1/sandboxes/{sandbox}/endpoint-credentials
+/v1/sandboxes/{sandbox}/mcp-gateway
+/v1/sandboxes/{sandbox}/mcp-gateway/servers
+/v1/sandboxes/{sandbox}/network-policies
+/v1/sandboxes/{sandbox}/policy-logs
+/v1/sandboxes/{sandbox}/ports
+/v1/sandboxes/{sandbox}/ports/{port}
+/v1/sandboxes/{sandbox}/renew-timeout
+/v1/sandboxes/{sandbox}/snapshots
+/v1/sandboxes/{sandbox}/ssh-certificates
+/v1/sandboxes/{sandbox}/start
+/v1/sandboxes/{sandbox}/stop
+/v1/secrets
+/v1/secrets/{secret}
+/v1/snapshots
+/v1/snapshots/{snapshot}
+/v1/snapshots/{snapshot}/restore
+/v1/volumes
+/v1/volumes/{volume}
+## counts
+text/event-stream	0
+/events	0
+stats	0
+showDeleted	0
+Idempotency-Key	79
+resumeFrom	4
+exitCode	3
+RetryInfo	11
+resourceExhausted	1
+"follow its events" phrases	8
+labels: properties	2
+quota identifiers	QuotaFailureErrorDetail, QuotaFailure, quota, QuotaFailureViolation, Quota, quotaMetric, quotaId, quotaDimensions, quota_dimensions, quotaValue, futureQuotaValue, quota_value

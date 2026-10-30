@@ -429,6 +429,29 @@ root-owned volumes (documented, with the `chown` fix), and `volume rm` needing `
   documented); the CLI shows neither rate nor accrued cost, and a deleted box leaves no record of shape, runtime or
   cost. AI Governance audit records lifecycle events, not usage. Ask: rate and cost in `ls`, and an exportable
   per-sandbox history.
+- **8.17 sbx has no monitoring command at all, locally or in the cloud.** Checked 30 Oct on v0.50.0, the whole verb
+  list of `sbx --help` and `sbx --cloud --help`, plus `ls`, `tui`, `env`, `diagnose`, `ttl`
+  ([bench/cli/sbx-cli-surface-2026-10-30.log](bench/cli/sbx-cli-surface-2026-10-30.log)). No verb is named `stats`, `top`,
+  `metrics`, `logs`, `events` or `history` (a grep for them over that log finds 0). What exists: `tui` (resource usage
+  for local sandboxes only), `ls --json` (name, agent, status, ports, workspace), `ttl` (time left), `diagnose` (the
+  sbx installation, not sandboxes). So a fleet runner has to sample `/proc/stat` and the cgroup inside each box and
+  poll `exec` to learn that a box ended. Ask: the monitoring set in
+  [docs/sbx-command-proposal.md](docs/sbx-command-proposal.md).
+- **8.18 DRAFT, measured once, not yet sent: a slow time window on the hosts that the guest cannot see.** Script:
+  [bench/fleet/host_speed_by_run.py](bench/fleet/host_speed_by_run.py), output
+  [bench/fleet/results/host-speed-2026-10-30.log](bench/fleet/results/host-speed-2026-10-30.log): 19 runs of the same
+  suite on 5 × 8 vCPU, one template, 29-30 Oct.
+  - 15 runs from 29 Oct 21:30 UTC to 30 Oct 08:04 UTC summed 9,860-11,469 s of test time, and the pure-CPU unit group
+    took 225-258 s. Two pairs on an identical commit agree within 2.5% (10,456 / 10,445 s; 10,788 / 10,525 s).
+  - The 4 runs from 12:55 to 14:00 UTC on 30 Oct summed 11,912 (one box missing), 13,017, 13,955 and 15,428 s. The
+    unit group took 268-341 s. Two of them were one commit, and the code changes in that window touched no unit test.
+  - Inside every guest: the same `lscpu` model and BogoMIPS; steal 0.01% normally and 0.02-0.05% in the window; no
+    cgroup throttling; `/proc/pressure/cpu` read empty in the samples.
+
+  Caveats: one window, measured once. It is daytime UTC, and no earlier run fell in daytime, so time of day and
+  host load can't be told apart yet. Before sending: confirm PSI directly in a box, capture the in-guest CPU
+  benchmark (before and after each run) in a normal and a slow run, and re-check the docs. Ask: a steal or contention
+  signal the guest can read, PSI, host CPU facts per sandbox, and a dedicated-vCPU shape.
 
 ## 5. Not tested
 

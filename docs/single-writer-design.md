@@ -85,6 +85,9 @@ PR.
 
 ## Proposal: C for live memory, D for curated memory, B underneath
 
+Option C with a working reference implementation (the MemPalace hub) and how sbx's proxy and gateway complete it:
+[memory-broker-proposal.md](memory-broker-proposal.md).
+
 1. **Live, searchable memory → C.** One memory service per scope, reached through the MCP gateway.
    It is the only writer of its store. Every write is a tool call: attributed to the sandbox,
    logged in the audit trail that already records network decisions, and subject to policy.

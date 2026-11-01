@@ -97,7 +97,8 @@ A `memory@1` capability, `mode: service`, with:
 1. **Reachability (first, unmeasured).** From a sandbox under the default-deny policy, call a host-side MCP endpoint.
    Record whether the policy needs an allow rule and what `sbx policy log` shows for the call.
 2. **Rerun the race tests through a broker.** `tests/race-test.sh` showed two writers on a shared `host-mount@1` lost
-   97% of markdown appends and left SQLite unopenable ([FINDINGS.md](../FINDINGS.md) §1). Rerun the SQLite half with
+   93–97% of markdown appends (3 repeats, `tests/md-race-repeat.sh`) and left SQLite unopenable
+   ([FINDINGS.md](../FINDINGS.md) §1). Rerun the SQLite half with
    both sandboxes writing through one MemPalace hub on the host. Expected: zero corruption, `PRAGMA integrity_check`
    clean, every write present. Repeat at least three times and state the count.
 3. **Kill the broker mid-run.** Expected: writes fail visibly, no sandbox falls back to the file, and a restarted broker

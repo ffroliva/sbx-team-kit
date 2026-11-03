@@ -455,7 +455,7 @@ root-owned volumes (documented, with the `chown` fix), and `volume rm` needing `
   documented); the CLI shows neither rate nor accrued cost, and a deleted box leaves no record of shape, runtime or
   cost. AI Governance audit records lifecycle events, not usage. Ask: rate and cost in `ls`, and an exportable
   per-sandbox history.
-  - Second project, same gap (a private benchmark, 2–3 Nov, sbx 0.50.1, 8 cloud boxes): with no cost from sbx, the runner
+  - Second project, same gap (sharpit-bench, 2–3 Nov, sbx 0.50.1, 8 cloud boxes): with no cost from sbx, the runner
     keeps its own spend ledger and must assume a rate (USD 0.00016/s, an overestimate). A box is recorded when the
     runner removes it, or charged its full TTL when the runner gives up on it; a runner killed hard records nothing,
     and the box bills to its TTL unseen until someone runs a manual collect step. Every client-side ledger

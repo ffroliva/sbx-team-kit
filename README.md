@@ -29,7 +29,7 @@ Everything here ran on `sbx` 0.50.0 on a Windows 11 host, plus Docker Cloud Sand
 | Self-hosted Mem0 kit (spec PR #126) | Two sandboxes start two PostgreSQL servers on one data directory: 4 of 4 runs damaged or destroyed, up to 100 % of acknowledged rows lost | [FINDINGS §1b](FINDINGS.md) |
 | In-run integrity | Kits protect provenance, not what the agent reads during its own run: `sudo` rewrites a baked file, `umount` replaces a `:ro` mount | [FINDINGS §4d](FINDINGS.md) |
 | A 22,000-test suite on a cloud fleet | Kliper's complete Python suite (unit, integration on testcontainers PostgreSQL, Playwright) on 5 × 8 vCPU sandboxes: 750 s on the first green run, 521 s four fixes later, ~$0.48 a run, against 1 h 49 min on a laptop (one run each) | [case](docs/fleet-case-kliper.md), [FINDINGS §8](FINDINGS.md) |
-| Fleet cleanup | A cloud sandbox's scoped secret outlives `rm` and the TTL reaper: a crashed client leaves a live token with no expiry. A killed `create` still completes and bills to its TTL | [FINDINGS §8.1–8.2](FINDINGS.md) |
+| Fleet cleanup | A cloud sandbox's scoped secret outlives `rm` and the TTL reaper, and the next sandbox reusing the name receives it (6/6 cloud; local `rm` deletes it, 3/3). A killed `create` still completes and bills to its TTL | [FINDINGS §8.1–8.2](FINDINGS.md) |
 | TLS behind a filtering firewall | Post-quantum ClientHellos are dropped; `sbx login` says "signed in" while cloud fails | [bench §3](bench/README.md) |
 
 From that, a design for safe shared agent memory: a single-writer contract with leases and fencing

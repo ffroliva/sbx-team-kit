@@ -357,13 +357,39 @@ root-owned volumes (documented, with the `chown` fix), and `volume rm` needing `
 
 ### Fleet lifecycle and credentials
 
-- **8.1 A scoped secret outlives its cloud sandbox, through `rm` and through the TTL reaper.** Script:
-  [bench/fleet/lifecycle.sh](bench/fleet/lifecycle.sh), dummy value, one run. Set `--sandbox <box> github` before
-  `create`; `rm -f <box>`; 30 s later `secret ls --sandbox <box>` still lists it. A box created with
-  `--ttl 2m --on-timeout delete` was reaped on time, and its secret was still listed 30 s later. The `sbx rm`
-  reference says local removal "deletes secrets scoped to each removed sandbox"; for `--cloud` it says only "deletes
-  the sandbox". So a client that dies before its own cleanup leaves a **live token with no expiry**: the TTL bounds
-  the box's cost, nothing bounds the secret. Ask: delete scoped secrets with the cloud sandbox, as locally.
+- **8.1 A cloud scoped secret outlives its sandbox, and the next sandbox reusing the name receives it.**
+  Measured 2 Nov 2026 on v0.50.1, dummy value only, cloud and local compared
+  ([tests/secret-lifecycle-test.sh](tests/secret-lifecycle-test.sh); method in
+  [docs/pre-report-runbook.md](docs/pre-report-runbook.md), runbook A). The probe is GitHub's
+  `/rate_limit` from inside the box, which tells three cases apart: `401` means the dummy scoped secret
+  was injected, `200` with limit 5000 means the account's global `github` secret was, and `200` with
+  limit 60 means nothing was (the method of docker/sbx-releases#785).
+
+  | New sandbox reusing the name of a removed one | Cloud | Local |
+  |---|---|---|
+  | after `rm` | **dummy injected, 4/4** | not injected, 3/3 |
+  | after the TTL reaper (`--ttl 2m --on-timeout delete`) | **dummy injected, 2/2** | n/a |
+  | control: a sandbox with another name | the global secret, 4/4 | nothing, 3/3 |
+
+  Logs: `bench/fleet/results/secret-lifecycle-2026-11-02-{cloud,cloud-run2,local}.log`. Round 3 of the
+  first cloud log is void (the account's 40 vCPU quota was full from another workload); the
+  `-local-VOID-ttl-flag` log is void (a script error). The "rows scoped to it" lines in these logs
+  over-count, because they matched the name inside "No secrets found"; the probe is the evidence. The
+  first observation was one run on 28 Oct (`bench/fleet/lifecycle.sh`).
+
+  **What the docs say.** The `sbx rm` reference says local removal "deletes secrets scoped to each
+  removed sandbox"; for `--cloud` it says only that it "deletes the sandbox in Docker Sandboxes Cloud".
+  The credentials page says scoped secrets are set with `--sandbox <name>` and does not describe their
+  lifetime. Secrets are scoped to a **name** and, in the cloud, must be set before `create` (8.3), so a
+  secret with no sandbox is a normal state. Keeping it across `rm` may be intended.
+
+  **What is not in doubt:** the same command behaves differently locally and in the cloud, the cloud
+  behaviour is undocumented, and nothing expires the secret. A sandbox that the reaper removed, which
+  nobody watched, leaves a live credential that the next sandbox with that name will use. Same account
+  only.
+
+  **The question for Docker:** is the cloud behaviour intended? If yes, document it and give `rm` and
+  the TTL action a way to delete scoped secrets. If no, match local.
 - **8.2 A `create` whose client is killed still completes, and the box bills until its TTL.** `timeout 3 sbx --cloud
   create …` exited 124 with no output; the box was listed 12 s later and running for the next 100 s. A caller cannot
   tell "not created" from "reply lost". The TTL is accurate to about 20 s and is the only reaper. Ask: an idempotent

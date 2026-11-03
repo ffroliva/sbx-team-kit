@@ -429,6 +429,12 @@ root-owned volumes (documented, with the `chown` fix), and `volume rm` needing `
   documented); the CLI shows neither rate nor accrued cost, and a deleted box leaves no record of shape, runtime or
   cost. AI Governance audit records lifecycle events, not usage. Ask: rate and cost in `ls`, and an exportable
   per-sandbox history.
+  - Second project, same gap (a private benchmark, 2–3 Nov, sbx 0.50.1, 8 cloud boxes): with no cost from sbx, the runner
+    keeps its own spend ledger and must assume a rate (USD 0.00016/s, an overestimate). A box is recorded when the
+    runner removes it, or charged its full TTL when the runner gives up on it; a runner killed hard records nothing,
+    and the box bills to its TTL unseen until someone runs a manual collect step. Every client-side ledger
+    undercounts each time its client dies. Ask (new): a budget the server enforces (`sbx config set cloud.budget
+    <USD>/month`, or `--max-cost` per create), so a create over budget is refused whatever the client does.
 - **8.17 sbx has no resource or cloud monitoring; the only event stream is local and hidden.** Checked 30 Oct on
   v0.50.0 (corrected the same day by the review in
   [docs/2026-10-30-council-sbx-command-proposal.md](docs/2026-10-30-council-sbx-command-proposal.md): a first version

@@ -71,6 +71,9 @@ table|json|yaml`, `--json`, `-q` (council C5). `-f` keeps its sbx meaning, `--fo
   (`amount, currency, basis: estimate|billed`), creator, labels (council C11, C14). Read with the same scope as
   listing sandboxes; retention stated by Docker, recommended 90 days, with a purge (council A9).
 - **`sbx quota [--format ...] [--json]`**: the vCPU limit, current use, and what is queued (council C10).
+- **A spend budget the server enforces** (proposed 3 Nov, FINDINGS 8.16 second project): `sbx quota` also shows
+  `budget, spent, currency`, set with `sbx config set cloud.budget <amount>/month`; a create that would pass it is
+  refused. Client-side ledgers undercount whenever their client dies before recording.
 
 ## 4. Fleets (proposed)
 

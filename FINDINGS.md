@@ -507,6 +507,28 @@ root-owned volumes (documented, with the `chown` fix), and `volume rm` needing `
     are incomplete: they cover only the pages visited).
 
   Caveats: one capture, one account. Re-capture on the current version before sending.
+- **8.20 DRAFT, measured twice on one commit: a 7,000-test Python suite finishes in 64 s and 82 s of wall time on five
+  8-vCPU cloud boxes, and the floor is the CPU, not sbx.** 4 Nov 2026, sbx 0.50.1, stock `shell` template, no kit. Each
+  box clones the public repository, runs `uv sync --locked`, then one file-sharded slice under pytest-xdist (`-n 8`).
+  The guest's `/proc/stat` is snapshotted at the start and around the tests, so busy CPU-seconds are the instrument.
+
+  | Run (same commit) | Wall, create to verdict | Per-box wall | Setup in box | Tests in box | CPU-seconds, all boxes | Steal |
+  |---|---|---|---|---|---|---|
+  | 1 | 64 s | 46–56 s | 2–3 s | 23–41 s | 711 | 0.0 s |
+  | 2 | 82 s | 48–76 s | 3 s | 22–53 s | 699 | 0–0.2 s |
+
+  Reading: 700 CPU-s over 40 vCPUs is 17.5 s, so the floor of a perfectly balanced run is about 18 s of tests; the
+  measured wall is 64–82 s because the slowest box sets it (CPU 83–219 s per box: the shards are unbalanced) and
+  because create (about 11 s), the script upload and the 2 s poll add roughly 20 s around the tests. Steal was zero, so
+  these runs saw none of the slow window of 8.18. Good design worth keeping: the stock `shell` template already has
+  Python, uv and git, so setup is 3 s and no kit is needed for a pure-Python suite; `--on-timeout delete` plus
+  `rm -f` left `sbx ls` empty after every run. Ask: none new; the per-box CPU figures are what 8.15 asks `sbx stats`
+  to provide.
+  Before sending: a second independent day, and the same shards on a second commit (a third run on a failing commit
+  took 109 s because one shard ran 250 failing tests with long assertion output, 80 s in its box).
+- **8.21 `sbx ls` prints the name as `agent/name`; `create --name` and `rm` use the bare name.** A script that sweeps boxes
+  from the listing has to strip the prefix (whether `rm` also accepts the prefixed form was not tested). Minor. Ask: print the bare
+  name in its own column, or accept either form.
 
 ## 5. Not tested
 

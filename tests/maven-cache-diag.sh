@@ -5,7 +5,7 @@
 set -u
 export MSYS_NO_PATHCONV=1
 cd "$(dirname "$0")/.."
-REPO=${REPO:-C:/development/github/tiny-ledger-sbx-work}; R=/c/${REPO#C:/}
+REPO=${REPO:-$PWD}; R=$(cygpath -u "$REPO")
 WL=docker.io/docker/sbx-kit-claude:2.1.311; TAG=$(date +%H%M%S); WARM=${WARM:?complete cache dir}
 CLASSIC='openssl_conf = openssl_init\n[openssl_init]\nssl_conf = ssl_sect\n[ssl_sect]\nsystem_default = tls_sect\n[tls_sect]\nGroups = X25519:secp256r1:secp384r1\n'
 BUILD='export OPENSSL_CONF=/tmp/classic-tls.cnf; cd '"$R"' && s=$(date +%s); ./mvnw -B -e verify > /tmp/mvn.log 2>&1; rc=$?;

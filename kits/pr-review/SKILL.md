@@ -150,7 +150,7 @@ is cheaper than every dimension that would have failed to notice.
 > **This is a routing failure, not a reviewer failure**, and routing is fixable.
 
 **Memory traversal:** for each `TOUCHED_PATH`, look up relevant slugs:
-- `transports/` → `[[migrated-host-driver-wire-lessons]]`, `[[pr-must-verify-on-affected-surface]]`, `[[flow-locale-leak-icon-ligatures]]`, `[[ligature-carrier-differs-by-host]]`, `[[playwright-click-no-downstream-event-signature]]`, `[[rest-transports-drop-ui-fields]]`, `[[image-video-mode-switch-symmetry]]`, `[[ui-selector-drift-error-exit-23]]`
+- `transports/` → `[[migrated-host-driver-wire-lessons]]`, `[[pr-must-verify-on-affected-surface]]`, `[[locale-rendering-note]]`, `[[ligature-carrier-differs-by-host]]`, `[[playwright-click-no-downstream-event-signature]]`, `[[rest-transports-drop-ui-fields]]`, `[[image-video-mode-switch-symmetry]]`, `[[ui-selector-drift-error-exit-23]]`
 - `data/` → `[[data-layer-overview]]`, `[[data-layer-test-pollution-trap]]`, `[[exit-code-16-data-store]]`, `[[on-started-callback-recorder-safety]]`
 - `auth/` → `[[real-browser-auth-mandatory]]`, `[[release-signing]]`
 - `cli` → `[[release-back-merge-gap-recovery]]`, `[[wheel-build-sanity-gate]]`
@@ -227,7 +227,7 @@ Each agent is a `general-purpose` agent (only subagent type that supports arbitr
 ### Per-agent prompt skeleton (mandatory v2 changes in bold)
 
 ```
-You are one of <N> parallel reviewers on a council reviewing PR #<N> of `gflow-cli` at C:\development\github\gflow-cli.
+You are one of <N> parallel reviewers on a council reviewing PR #<N> of `gflow-cli` at <workdir>/gflow-cli.
 
 Your dimension is **<DIMENSION NAME>**. Other agents handle <other dimensions> — do NOT duplicate their work.
 
@@ -236,7 +236,7 @@ Your dimension is **<DIMENSION NAME>**. Other agents handle <other dimensions> �
 
 **🚨 CRITICAL — file reading + verification rules (v2 stale-tree-reads fix + v2.1 verify-before-claim):**
 
-The orchestrator's working tree is on `<base_branch>` (typically `develop`), NOT the PR head. If you `Read` a file in `C:\development\github\gflow-cli\`, you get the PRE-PR copy and will produce FALSE POSITIVES like "file X doesn't exist" or "claim Y not applied" when in fact X and Y are present on the PR head.
+The orchestrator's working tree is on `<base_branch>` (typically `develop`), NOT the PR head. If you `Read` a file in `<workdir>/gflow-cli\`, you get the PRE-PR copy and will produce FALSE POSITIVES like "file X doesn't exist" or "claim Y not applied" when in fact X and Y are present on the PR head.
 
 **Mandatory rules:**
 
@@ -286,12 +286,12 @@ If you are NOT sure a finding is real because it depends on file content, VERIFY
 
 | Dim | Mandatory memory slugs |
 |---|---|
-| D1 | `[[pr-must-verify-on-affected-surface]]`, `[[video-model-capability-matrix]]`, `[[flow-capabilities-are-cohort-dependent]]`, `[[migrated-refusal-is-a-dom-card-not-a-wire-record]]` |
+| D1 | `[[pr-must-verify-on-affected-surface]]`, `[[video-model-capability-matrix]]`, `[[capability-cohort-note]]`, `[[migrated-refusal-is-a-dom-card-not-a-wire-record]]` |
 | D2 | `[[ruff-format-scope-is-src-tests]]`, `[[git-add-all-sweeps-scratch-files]]` |
 | D3 | `[[real-browser-auth-mandatory]]`, `[[release-signing]]` |
 | D4 | `[[e2e-evidence-is-a-contributor-deliverable]]`, `[[force-color-breaks-cli-tests]]`, `[[pr-must-verify-on-affected-surface]]`, `[[full-test-suite-ooms]]`, `[[stale-test-discovery]]`, `[[structlog-cache-logger-off-for-tests]]`, `[[windows-running-launcher-blocks-uv-upgrade]]` |
 | D5 | `[[memory-is-working-dir-keyed]]`, `[[release-spec-plan-memory-consolidation]]`, `[[pr-council-review-stale-tree-reads]]` (this very bug, as the council should self-improve) |
-| D6 | `[[ui-selector-drift-error-exit-23]]`, `[[credit-free-route-abort-verification]]`, `[[drive-the-page-dont-replay-the-rpc]]`, `[[flow-credits-videos-only]]`, `[[flow-recon-must-run-on-denon82-ffroliva-migrated]]`, `[[flow-locale-leak-icon-ligatures]]`, `[[ligature-carrier-differs-by-host]]`, `[[playwright-click-no-downstream-event-signature]]`, `[[rest-transports-drop-ui-fields]]`, `[[image-video-mode-switch-symmetry]]`, `[[verification-ledger-5-layer]]`, `[[migrated-host-driver-wire-lessons]]`, `[[content-policy-text-scan-false-positives-on-page-chrome]]` |
+| D6 | `[[ui-selector-drift-error-exit-23]]`, `[[credit-free-route-abort-verification]]`, `[[drive-the-page-dont-replay-the-rpc]]`, `[[credit-scope-note]]`, `[[migrated-host-note]]`, `[[locale-rendering-note]]`, `[[ligature-carrier-differs-by-host]]`, `[[playwright-click-no-downstream-event-signature]]`, `[[rest-transports-drop-ui-fields]]`, `[[image-video-mode-switch-symmetry]]`, `[[verification-ledger-5-layer]]`, `[[migrated-host-driver-wire-lessons]]`, `[[content-policy-text-scan-false-positives-on-page-chrome]]` |
 | D7 | `[[on-started-callback-recorder-safety]]`, `[[data-layer-test-pollution-trap]]`, `[[exit-code-16-data-store]]` |
 | D8 | (none mandatory) |
 | D9 | `[[prose-conflicts-hide-in-disjoint-files]]`, `[[doc-examples-are-untested-fixtures]]`, `[[readme-hybrid-router-pattern]]`, `[[agents-md-vs-llms-txt]]`, `[[pypi-readme-staleness-fix]]` |

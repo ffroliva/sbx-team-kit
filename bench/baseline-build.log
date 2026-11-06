@@ -34,7 +34,7 @@ mvn exit=0
 SANDBOX warm: 54s
 (1) [WARNING] [cucumber] The classpath resource selector 'features' should not be used to select features in a package. Use the package selector with 'features' instead (via @Suite com.ffroliva.tinyledger.cucumber.CucumberTest).
 WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
-WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.diffplug.spotless.java.ModuleHelper (file:/C:/Users/ffrol/.m2/repository/com/diffplug/spotless/spotless-lib/4.10.0/spotless-lib-4.10.0.jar)
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.diffplug.spotless.java.ModuleHelper (file:/<workdir>/.m2/repository/com/diffplug/spotless/spotless-lib/4.10.0/spotless-lib-4.10.0.jar)
 WARNING: Please consider reporting this to the maintainers of class com.diffplug.spotless.java.ModuleHelper
 WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 HOST cold: 71s exit=0

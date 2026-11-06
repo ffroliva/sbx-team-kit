@@ -25,14 +25,14 @@ stage pwinst bash -c 'cd k && (uv run playwright install chromium || uv run play
 cd k
 py() { local name=$1; shift; stage "$name" uv run pytest -q -p no:cacheprovider --junitxml="$OUT/$name.xml" "$@"; }
 # A. Worker sweep on one fixed workload: the 1/8 shard of the Docker-backed suite (212 s at -n 4 on the first box).
-for n in 4 8 12 16; do KLIPER_TEST_SHARD=1/8 py "a_n$n" -n $n --dist loadfile -m "$BASE and not subprocess"; done
+for n in 4 8 12 16; do TEST_SHARD=1/8 py "a_n$n" -n $n --dist loadfile -m "$BASE and not subprocess"; done
 # B. Playwright under xdist: the 1/4 shard took 875 s serial on the first box.
-for n in 4 8; do KLIPER_TEST_SHARD=1/4 py "b_pw_n$n" -n $n --dist loadfile -m playwright; done
+for n in 4 8; do TEST_SHARD=1/4 py "b_pw_n$n" -n $n --dist loadfile -m playwright; done
 # D. The subprocess tests, serial on Windows only because of 0xC0000142: all of them under xdist on Linux.
 py d_sub_n8 -n 8 --dist loadfile -m "$BASE and subprocess"
 # C. Both suites at once on the same box: Docker-backed 1/8 at -n 8 next to Playwright 1/4 at -n 4.
-KLIPER_TEST_SHARD=1/8 py c_int_n8 -n 8 --dist loadfile -m "$BASE and not subprocess" &
-KLIPER_TEST_SHARD=1/4 py c_pw_n4 -n 4 --dist loadfile -m playwright &
+TEST_SHARD=1/8 py c_int_n8 -n 8 --dist loadfile -m "$BASE and not subprocess" &
+TEST_SHARD=1/4 py c_pw_n4 -n 4 --dist loadfile -m playwright &
 wait
 echo "== total secs=$(( $(date +%s) - T0 ))" | tee -a "$OUT/timeline.txt"
 kill %1 %2 2>/dev/null; echo DONE >> "$OUT/timeline.txt"

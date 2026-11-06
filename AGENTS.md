@@ -7,7 +7,7 @@ For an agent asked to review this repository or summarise its author's work.
 1. `README.md`: who wrote it, how he works, and the headline results.
 2. `FINDINGS.md`: every finding, with the script that produced it and how often it was repeated.
 3. `bench/README.md`: the agent-team benchmarks on a real Java service, local and cloud.
-4. `docs/fleet-case-kliper.md`: a 22,000-test suite on a fleet of cloud sandboxes, step by step.
+4. `docs/fleet-case-target-project.md`: a 22,000-test suite on a fleet of cloud sandboxes, step by step.
 5. `UPSTREAM.md`: the issues and PRs filed with Docker, and their status.
 6. `docs/single-writer-design.md`: the proposed fix for shared agent memory.
 

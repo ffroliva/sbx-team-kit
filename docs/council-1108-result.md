@@ -44,7 +44,7 @@ Synthesis **YELLOW** (no RED; D0 unverified — one CI check without a result). 
    exit 9. *(D1, D4, D9)*
 2. `docs/MCP.md:87` — still says r2v with `reference_entity_names`/`reference_entities` returns the
    exit-36 envelope; this PR serves r2v with a named entity. *(D15 — Haiku)*
-3. `docs/superpowers/memory/flow-recon-must-run-on-denon82-ffroliva-migrated.md` — still lists
+3. `a generic migrated-host memory note` — still lists
    character entities on video as unported. *(D5 — Haiku)*
 4. No e2e test for the newly allowed **paid** r2v + named-entity path; "holding paid runs" is a
    choice, not a named blocker. *(D4, D6)*

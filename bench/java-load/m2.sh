@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -u
-K=C:/development/github/sbx-kits-contrib; WS=$(pwd)/ws; W=docker.io/docker/sbx-kit-claude:2.1.311
+K=${K:-../sbx-kits-contrib}; WS=$(pwd)/ws; W=docker.io/docker/sbx-kit-claude:2.1.311
 now(){ date +%s.%N; }; el(){ awk -v a="$1" -v b="$2" 'BEGIN{printf "%.1f", b-a}'; }
 echo "# $(date -u +%FT%TZ) $(sbx version) host=$(uname -m)"
 mk(){ local b=$1; shift; sbx rm -f $b >/dev/null 2>&1; local t=$(now); if sbx create --no-progress --name $b "$@" "$WS" > tmp/$b.out 2>&1; then echo "ok $(el $t $(now))"; else echo "FAIL $(el $t $(now)) $(grep -m1 -iE 'error' tmp/$b.out | cut -c1-200)"; fi; }

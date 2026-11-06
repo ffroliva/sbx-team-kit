@@ -7,8 +7,8 @@
 set -u
 export MSYS_NO_PATHCONV=1
 cd "$(dirname "$0")/.."
-REPO=${REPO:-C:/development/github/tiny-ledger-sbx-work}
-R=/${REPO/C:/c}; R=${R//\/\//\/}               # path of the clone inside the VM
+REPO=${REPO:-$PWD}
+R=$(cygpath -u "$REPO")                 # path of the clone inside the VM
 WL=docker.io/docker/sbx-kit-claude:2.1.311     # v3 workload: mixins don't attach to built-in agent names
 N=${N:-3}; REPS=${REPS:-2}; TAG=$(date +%H%M%S)
 CLASSIC='openssl_conf = openssl_init\n[openssl_init]\nssl_conf = ssl_sect\n[ssl_sect]\nsystem_default = tls_sect\n[tls_sect]\nGroups = X25519:secp256r1:secp384r1\n'

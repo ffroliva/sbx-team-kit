@@ -1,6 +1,6 @@
 # Case: a 22,000-test suite on a fleet of cloud sandboxes
 
-Kliper is a media-monitoring platform: a Python service on FastAPI and PostgreSQL, with Playwright
+A target project is a media-monitoring platform: a Python service on FastAPI and PostgreSQL, with Playwright
 for its screens. In October 2026 its complete test suite took **1 h 49 min** on a developer machine,
 and the GitHub Actions minutes that normally ran it were spent for the month. The question was
 whether Docker Cloud Sandboxes could give the same verdict, faster, at a cost a small team can carry.
@@ -76,7 +76,7 @@ Python itself is not a download: the template already ships uv 0.13.4 and CPytho
 
 ## Step 3: the fleet
 
-The orchestrator (in Kliper's private repository) does this per run:
+The orchestrator (in the target project's repository) does this per run:
 
 1. checks the sha is on the remote the boxes clone from;
 2. sets a scoped secret per box, creates the boxes with a TTL and `--on-timeout delete`, names them

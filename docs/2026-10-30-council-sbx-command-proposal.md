@@ -93,7 +93,7 @@ Conflicts ruled:
 
 ## Owner gate
 
-- **External send (A15, C13).** FINDINGS §8 and `docs/fleet-case-kliper.md` name the project. Default: send only
+- **External send (A15, C13).** FINDINGS §8 and `docs/fleet-case-target-project.md` name the project. Default: send only
   copies of the cited items with names removed; the repository stays as is until the owner decides.
 - Nothing has been sent upstream. Commit local only.
 

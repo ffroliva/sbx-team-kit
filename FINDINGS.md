@@ -345,7 +345,7 @@ Log: [bench/volume-removal-1.log](bench/volume-removal-1.log). sbx v0.50.0, Wind
 
 ## 8. Cloud fleets: a 22,000-test Python suite across five sandboxes (measured 27–28 Oct)
 
-The case behind these is [docs/fleet-case-kliper.md](docs/fleet-case-kliper.md): Kliper's complete suite
+The case behind these is [docs/fleet-case-target-project.md](docs/fleet-case-target-project.md): the target project's complete suite
 (unit, contract, integration on testcontainers PostgreSQL, Playwright) on 5 × 8 vCPU cloud sandboxes, 750 s on the
 first green run, 521 s four fixes later. Scripts: [bench/fleet/](bench/fleet/). Logs: [bench/fleet/results/](bench/fleet/results/).
 Kit: [kits/python-e2e](kits/python-e2e/python-e2e.yaml). sbx v0.50.0 throughout.
@@ -455,7 +455,7 @@ root-owned volumes (documented, with the `chown` fix), and `volume rm` needing `
   documented); the CLI shows neither rate nor accrued cost, and a deleted box leaves no record of shape, runtime or
   cost. AI Governance audit records lifecycle events, not usage. Ask: rate and cost in `ls`, and an exportable
   per-sandbox history.
-  - Second project, same gap (sharpit-bench, 2–3 Nov, sbx 0.50.1, 8 cloud boxes): with no cost from sbx, the runner
+  - Second project, same gap (a second project, 2–3 Nov, sbx 0.50.1, 8 cloud boxes): with no cost from sbx, the runner
     keeps its own spend ledger and must assume a rate (USD 0.00016/s, an overestimate). A box is recorded when the
     runner removes it, or charged its full TTL when the runner gives up on it; a runner killed hard records nothing,
     and the box bills to its TTL unseen until someone runs a manual collect step. Every client-side ledger

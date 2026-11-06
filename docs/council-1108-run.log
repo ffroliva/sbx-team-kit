@@ -1,7 +1,7 @@
 == host: trusted inputs
    merge-base 7b6b9054, diff 41287 chars, CI ['SUCCESS', 'SUCCESS', None]
 == sandbox rv-1108: clone of the PR at 38827652
-   workdir /c/development/github/sbx-team-kit/tmp/review-1108, HEAD 38827652 == pinned SHA
+   workdir <workdir>/sbx-team-kit/tmp/review-1108, HEAD 38827652 == pinned SHA
 == 9 dimensions in parallel inside the sandbox
    after 20s: 10 claude processes; out dir: ok
 == synthesis (opus) inside the sandbox
@@ -42,5 +42,5 @@ rv-1108   network   archive.ubuntu.com:80            forward                    
 rv-1108   network   security.ubuntu.com:80           forward                                            00:06:01 27-Oct   3
 rv-1108   network   download.docker.com:443          forward-bypass                                     00:06:01 27-Oct   3
 rv-1108   network   cli.github.com:443               forward-bypass                                     00:06:01 27-Oct   3
-artefacts: C:\development\github\sbx-team-kit\logs\council-1108-000541
+artefacts: <workdir>\sbx-team-kit\logs\council-1108-000541
 exit 0
